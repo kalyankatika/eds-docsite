@@ -1,0 +1,12 @@
+---
+permalink: /search-index.json
+---
+[
+{%- for item in collections.all %}
+  {
+    "id": "{{ item.url }}",
+    "title": "{{ item.data.title }}",
+    "content": "{{ item.template.inputContent | striptags }}"
+  }{% if not loop.last %},{% endif %}
+{%- endfor %}
+]

@@ -1,0 +1,100 @@
+---
+layout: base.njk
+title: Documentation
+eleventyNavigation:
+  key: Documentation
+  order: 3
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="mb-12">
+    <h1 class="text-4xl font-bold text-primary mb-4">Documentation</h1>
+    <p class="text-xl text-neutral-dark mb-8">Complete guide to using the Enterprise Design System</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Left Sidebar Navigation -->
+    <div class="lg:col-span-1">
+      <nav class="sticky top-8 bg-neutral rounded-fds p-6">
+        <ul class="space-y-6">
+          <li>
+            <h3 class="font-medium text-neutral-dark mb-3">Getting Started</h3>
+            <ul class="space-y-2 ml-4">
+              <li><a href="#installation" class="text-primary hover:underline">Installation</a></li>
+              <li><a href="#setup" class="text-primary hover:underline">Setup</a></li>
+              <li><a href="#usage" class="text-primary hover:underline">Basic Usage</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="font-medium text-neutral-dark mb-3">Design Guidelines</h3>
+            <ul class="space-y-2 ml-4">
+              <li><a href="#colors" class="text-primary hover:underline">Colors</a></li>
+              <li><a href="#typography" class="text-primary hover:underline">Typography</a></li>
+              <li><a href="#spacing" class="text-primary hover:underline">Spacing</a></li>
+              <li><a href="#components" class="text-primary hover:underline">Components</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="font-medium text-neutral-dark mb-3">Components</h3>
+            <ul class="space-y-2 ml-4">
+              <li><a href="#buttons" class="text-primary hover:underline">Buttons</a></li>
+              <li><a href="#forms" class="text-primary hover:underline">Forms</a></li>
+              <li><a href="#navigation" class="text-primary hover:underline">Navigation</a></li>
+              <li><a href="#data-display" class="text-primary hover:underline">Data Display</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="font-medium text-neutral-dark mb-3">Resources</h3>
+            <ul class="space-y-2 ml-4">
+              <li><a href="#examples" class="text-primary hover:underline">Examples</a></li>
+              <li><a href="#templates" class="text-primary hover:underline">Templates</a></li>
+              <li><a href="#tools" class="text-primary hover:underline">Tools</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lg:col-span-2 space-y-12">
+      <section id="installation" class="bg-neutral rounded-fds p-6">
+        <h2 class="text-2xl font-bold text-primary mb-6">Installation</h2>
+        <div class="prose prose-green max-w-none">
+          <p>Get started with the Enterprise Design System by installing our package:</p>
+          <pre class="bg-white rounded-fds p-4 my-4"><code>npm install @Enterprise/design-system</code></pre>
+          <p>Or if you're using yarn:</p>
+          <pre class="bg-white rounded-fds p-4 my-4"><code>yarn add @Enterprise/design-system</code></pre>
+        </div>
+      </section>
+
+      <section id="setup" class="bg-neutral rounded-fds p-6">
+        <h2 class="text-2xl font-bold text-primary mb-6">Setup</h2>
+        <div class="prose prose-green max-w-none">
+          <p>Import our styles in your main CSS file:</p>
+          <pre class="bg-white rounded-fds p-4 my-4"><code>@import '@Enterprise/design-system/styles';</code></pre>
+          <p>Or include it in your HTML:</p>
+          <pre class="bg-white rounded-fds p-4 my-4"><code>&lt;link rel="stylesheet" href="@Enterprise/design-system/styles.css"&gt;</code></pre>
+        </div>
+      </section>
+
+      <section id="usage" class="bg-neutral rounded-fds p-6">
+        <h2 class="text-2xl font-bold text-primary mb-6">Basic Usage</h2>
+        <div class="prose prose-green max-w-none">
+          <p>Start using our components by following our core principles:</p>
+          <ul>
+            <li>Use our predefined color palette</li>
+            <li>Follow our spacing guidelines</li>
+            <li>Maintain consistent border radius</li>
+            <li>Implement proper typography</li>
+          </ul>
+          <p>Example of a primary button:</p>
+          <pre class="bg-white rounded-fds p-4 my-4"><code>&lt;button class="bg-primary hover:bg-primary-dark text-white rounded-fds px-6 py-3"&gt;
+  Click me
+&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- More sections will be added for each nav item -->
+    </div>
+  </div>
+</div>

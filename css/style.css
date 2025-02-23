@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-primary transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .meta-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800;
+  }
+
+  .site-header {
+    @apply h-16 border-b border-gray-200 bg-white fixed top-0 left-0 right-0 z-100;
+  }
+
+  .header-content {
+    @apply h-full flex items-center justify-between;
+  }
+
+  .logo {
+    @apply text-lg font-bold text-primary;
+  }
+
+  .main-nav {
+    @apply mt-16 border-b border-gray-200 bg-white;
+  }
+
+  .nav-tabs {
+    @apply flex list-none gap-4 p-4;
+  }
+
+  .nav-tab {
+    @apply text-gray-600 hover:text-primary transition-colors duration-200 p-2 rounded-md;
+  }
+
+  .count {
+    @apply bg-primary text-white p-1 rounded-full text-xs;
+  }
+
+  .page-layout {
+    @apply flex mt-4 min-h-screen;
+  }
+
+  .sidebar {
+    @apply w-64 p-4 border-r border-gray-200;
+  }
+
+  .main-content {
+    @apply flex-1 p-4;
+  }
+
+  .search-container {
+    @apply relative w-72;
+  }
+
+  #search-input {
+    @apply w-full p-2 border border-gray-200 rounded-md;
+  }
+
+  #search-results {
+    @apply absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-md mt-2 max-h-96 overflow-y-auto shadow-md;
+  }
+
+  .search-result {
+    @apply p-2 border-b border-gray-200;
+  }
+
+  .search-result:last-child {
+    @apply border-b-0;
+  }
+
+  .search-result a {
+    @apply text-gray-600;
+  }
+
+  .search-result:hover {
+    @apply bg-gray-100;
+  }
+
+  .meta {
+    @apply inline-block text-xs text-gray-600 mr-4;
+  }
+
+  .quick-links {
+    @apply mb-8;
+  }
+
+  .quick-links h3 {
+    @apply mb-4 text-primary;
+  }
+
+  .quick-links ul {
+    @apply list-none;
+  }
+
+  .quick-links a {
+    @apply text-gray-600 block p-2;
+  }
+
+  .quick-links a:hover {
+    @apply text-primary;
+  }
+
+  .site-footer {
+    @apply bg-gray-100 p-8 mt-8;
+  }
+
+  .footer-content {
+    @apply grid grid-cols-1 gap-8;
+  }
+
+  .footer-section h4 {
+    @apply text-primary mb-4;
+  }
+
+  .footer-section ul {
+    @apply list-none;
+  }
+
+  .footer-section a {
+    @apply text-gray-600 block p-1;
+  }
+
+  .footer-section a:hover {
+    @apply text-primary;
+  }
+
+  .component-grid {
+    @apply grid grid-cols-1 gap-6 mt-8;
+  }
+
+  .component-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .component-card h3 {
+    @apply mb-4 text-primary;
+  }
+
+  .component-card p {
+    @apply mb-4 text-gray-600;
+  }
+
+  .component-meta {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .main-content h1 {
+    @apply text-primary mb-8;
+  }
+
+  .main-content h2 {
+    @apply text-gray-600 mb-4;
+  }
+
+  .main-content h3 {
+    @apply text-gray-700 mb-3;
+  }
+
+  .main-content ul {
+    @apply list-disc ml-6 mb-6;
+  }
+
+  .main-content ol {
+    @apply list-decimal ml-6 mb-6;
+  }
+
+  .main-content li {
+    @apply mb-2;
+  }
+
+  .main-content code {
+    @apply bg-gray-100 p-1 rounded-md font-mono;
+  }
+
+  .main-content pre {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+  }
+
+  .main-content pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .channel-section,
+  .type-section,
+  .owner-section {
+    @apply mb-12 pb-8 border-b border-gray-200;
+  }
+
+  .channel-section:last-child,
+  .type-section:last-child,
+  .owner-section:last-child {
+    @apply border-b-0;
+  }
+
+  .support-contact {
+    @apply bg-gray-100 p-6 rounded-lg mt-8;
+  }
+
+  .support-contact h3 {
+    @apply text-primary mb-4;
+  }
+
+  @media (max-width: 768px) {
+    .page-layout {
+      @apply flex-col;
+    }
+
+    .sidebar {
+      @apply w-full border-r-0 border-b border-gray-200;
+    }
+
+    .search-container {
+      @apply w-full max-w-md;
+    }
+
+    .component-grid {
+      @apply grid-cols-1;
+    }
+
+    .component-meta {
+      @apply flex-col;
+    }
+
+    .main-content {
+      @apply p-4;
+    }
+  }
+}

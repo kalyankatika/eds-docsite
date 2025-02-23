@@ -1,0 +1,72 @@
+[
+  {
+    "id": "/",
+    "title": "Home",
+    "content": ""
+  },
+  {
+    "id": "/about/",
+    "title": "About Us",
+    "content": ""
+  },
+  {
+    "id": "/docs/",
+    "title": "Documentation",
+    "content": ""
+  },
+  {
+    "id": "/components/",
+    "title": "Components",
+    "content": ""
+  },
+  {
+    "id": "/search-index.json",
+    "title": "",
+    "content": ""
+  },
+  {
+    "id": "/channels/",
+    "title": "Components by Channel",
+    "content": ""
+  },
+  {
+    "id": "/types/",
+    "title": "Components by Type",
+    "content": ""
+  },
+  {
+    "id": "/owners/",
+    "title": "Components by Owner",
+    "content": ""
+  },
+  {
+    "id": "/support/fds/",
+    "title": "FDS Support",
+    "content": ""
+  },
+  {
+    "id": "/support/partners/",
+    "title": "FDS Partners",
+    "content": ""
+  },
+  {
+    "id": "/getting-started/",
+    "title": "Getting Started",
+    "content": ""
+  },
+  {
+    "id": "/guidelines/",
+    "title": "Design Guidelines",
+    "content": ""
+  },
+  {
+    "id": "/storybook/",
+    "title": "Storybook",
+    "content": ""
+  },
+  {
+    "id": "/documentation/",
+    "title": "Documentation",
+    "content": ""
+  }
+]

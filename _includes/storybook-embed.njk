@@ -1,0 +1,11 @@
+{% macro storybookEmbed(id, height = '500px') %}
+<div class="storybook-embed">
+    <iframe
+        src="https://{{ id }}"
+        style="width:100%; height:{{ height }}; border:0; border-radius: 4px; overflow:hidden;"
+        title="Storybook Embed"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+    ></iframe>
+</div>
+{% endmacro %}

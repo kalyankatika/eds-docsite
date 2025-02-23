@@ -1,0 +1,91 @@
+{
+  "title": "Enterprise Design System",
+  "description": "A comprehensive design system for building consistent Enterprise digital experiences",
+  "owners": [
+    {
+      "name": "Core Team",
+      "url": "/owners/core-team",
+      "description": "FDS Core Development Team",
+      "count": 15
+    },
+    {
+      "name": "UX Team",
+      "url": "/owners/ux-team",
+      "description": "User Experience Design Team",
+      "count": 12
+    },
+    {
+      "name": "Platform Team",
+      "url": "/owners/platform-team",
+      "description": "Platform Development Team",
+      "count": 8
+    }
+  ],
+  "latestUpdates": [
+    {
+      "title": "New Button Components",
+      "description": "Added new button variants and states",
+      "date": "2025-02-20",
+      "author": "Core Team"
+    },
+    {
+      "title": "Typography Updates",
+      "description": "Updated font sizes and line heights",
+      "date": "2025-02-18",
+      "author": "UX Team"
+    },
+    {
+      "title": "Color System Refresh",
+      "description": "Refreshed color palette with new green shades",
+      "date": "2025-02-15",
+      "author": "Core Team"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Getting Started",
+      "items": [
+        { "name": "Introduction", "url": "/getting-started#introduction" },
+        { "name": "Installation", "url": "/getting-started#installation" },
+        { "name": "Usage", "url": "/getting-started#usage" }
+      ]
+    },
+    {
+      "title": "Foundation",
+      "items": [
+        { "name": "Colors", "url": "/foundation/colors" },
+        { "name": "Typography", "url": "/foundation/typography" },
+        { "name": "Spacing", "url": "/foundation/spacing" },
+        { "name": "Grid", "url": "/foundation/grid" }
+      ]
+    },
+    {
+      "title": "Components",
+      "items": [
+        { "name": "Buttons", "url": "/components/buttons" },
+        { "name": "Forms", "url": "/components/forms" },
+        { "name": "Navigation", "url": "/components/navigation" },
+        { "name": "Data Display", "url": "/components/data-display" }
+      ]
+    },
+    {
+      "title": "Resources",
+      "items": [
+        { "name": "Design Kit", "url": "/resources/design-kit" },
+        { "name": "Icons", "url": "/resources/icons" },
+        { "name": "Templates", "url": "/resources/templates" }
+      ]
+    }
+  ],
+  "channels": [
+    { "name": "Web", "url": "/channels/web", "count": 24 },
+    { "name": "Mobile", "url": "/channels/mobile", "count": 18 },
+    { "name": "Desktop", "url": "/channels/desktop", "count": 12 }
+  ],
+  "types": [
+    { "name": "Components", "url": "/components", "count": 45 },
+    { "name": "Patterns", "url": "/patterns", "count": 15 },
+    { "name": "Guidelines", "url": "/guidelines", "count": 8 },
+    { "name": "Resources", "url": "/resources", "count": 10 }
+  ]
+}
