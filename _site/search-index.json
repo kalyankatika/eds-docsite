@@ -1,22 +1,7 @@
 [
   {
-    "url": "/",
-    "title": "Home - Enterprise Design System",
-    "excerpt": ""
-  },
-  {
     "url": "/about/",
     "title": "About Us",
-    "excerpt": ""
-  },
-  {
-    "url": "/docs/",
-    "title": "Documentation",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/",
-    "title": "Components",
     "excerpt": ""
   },
   {
@@ -25,23 +10,48 @@
     "excerpt": ""
   },
   {
-    "url": "/types/",
-    "title": "Components by Type",
+    "url": "/components/",
+    "title": "Components",
     "excerpt": ""
   },
   {
-    "url": "/owners/",
-    "title": "Components by Owner",
+    "url": "/components/alerts/",
+    "title": "Alerts",
     "excerpt": ""
   },
   {
-    "url": "/support/fds/",
-    "title": "FDS Support",
+    "url": "/components/buttons/",
+    "title": "Buttons",
     "excerpt": ""
   },
   {
-    "url": "/support/partners/",
-    "title": "FDS Partners",
+    "url": "/components/cards/",
+    "title": "Cards",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/forms/",
+    "title": "Form Elements",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/modals/",
+    "title": "Modals",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/navigation/",
+    "title": "Navigation",
+    "excerpt": ""
+  },
+  {
+    "url": "/docs/",
+    "title": "Documentation",
+    "excerpt": ""
+  },
+  {
+    "url": "/documentation/",
+    "title": "Documentation",
     "excerpt": ""
   },
   {
@@ -55,43 +65,33 @@
     "excerpt": ""
   },
   {
+    "url": "/",
+    "title": "Home - Enterprise Design System",
+    "excerpt": ""
+  },
+  {
+    "url": "/owners/",
+    "title": "Components by Owner",
+    "excerpt": ""
+  },
+  {
     "url": "/storybook/",
     "title": "Storybook",
     "excerpt": ""
   },
   {
-    "url": "/documentation/",
-    "title": "Documentation",
+    "url": "/support/fds/",
+    "title": "FDS Support",
     "excerpt": ""
   },
   {
-    "url": "/components/buttons/",
-    "title": "Buttons",
+    "url": "/support/partners/",
+    "title": "FDS Partners",
     "excerpt": ""
   },
   {
-    "url": "/components/forms/",
-    "title": "Form Elements",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/cards/",
-    "title": "Cards",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/navigation/",
-    "title": "Navigation",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/alerts/",
-    "title": "Alerts",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/modals/",
-    "title": "Modals",
+    "url": "/types/",
+    "title": "Components by Type",
     "excerpt": ""
   }
 ]
