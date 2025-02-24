@@ -4,61 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FDS Support - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <h1>FDS Support</h1>
-<h2>Getting Help with FDS Components</h2>
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1>FDS Support</h1>
+<h2 id="getting-help-with-fds-components" tabindex="-1">Getting Help with FDS Components <a class="anchor" href="#getting-help-with-fds-components" aria-hidden="true">#</a></h2>
 <p>If you need assistance with FDS components or have questions about implementation, here are your support options:</p>
-<h3>Documentation</h3>
+<h3 id="documentation" tabindex="-1">Documentation <a class="anchor" href="#documentation" aria-hidden="true">#</a></h3>
 <ul>
 <li>Review our <a href="/getting-started">Getting Started Guide</a></li>
 <li>Check out our <a href="/guidelines">Component Guidelines</a></li>
 <li>Browse through our <a href="/components">Component Library</a></li>
 </ul>
-<h3>Contact Support</h3>
+<h3 id="contact-support" tabindex="-1">Contact Support <a class="anchor" href="#contact-support" aria-hidden="true">#</a></h3>
 <ul>
-<li>Email: fds-support@Enterprise.com</li>
+<li>Email: <a href="mailto:fds-support@Enterprise.com">fds-support@Enterprise.com</a></li>
 <li>Slack: #fds-support</li>
 <li>JIRA: FDS Project Board</li>
 </ul>
-<h3>Office Hours</h3>
+<h3 id="office-hours" tabindex="-1">Office Hours <a class="anchor" href="#office-hours" aria-hidden="true">#</a></h3>
 <p>We hold weekly office hours where you can ask questions and get help with your implementation:</p>
 <ul>
 <li>Tuesdays: 10:00 AM - 12:00 PM EST</li>
 <li>Thursdays: 2:00 PM - 4:00 PM EST</li>
 </ul>
-<h3>Bug Reports</h3>
+<h3 id="bug-reports" tabindex="-1">Bug Reports <a class="anchor" href="#bug-reports" aria-hidden="true">#</a></h3>
 <p>If you find a bug in any of our components:</p>
 <ol>
 <li>Check the existing issues in our JIRA board</li>
@@ -72,6 +85,21 @@
 </li>
 </ol>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#getting-help-with-fds-components">Getting Help with FDS Components</a><ul><li><a href="#documentation">Documentation</a></li><li><a href="#contact-support">Contact Support</a></li><li><a href="#office-hours">Office Hours</a></li><li><a href="#bug-reports">Bug Reports</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

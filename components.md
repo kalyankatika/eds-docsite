@@ -3,52 +3,96 @@ layout: "base.njk"
 title: "Components"
 eleventyNavigation:
   key: Components
-  order: 4
+  order: 2
 ---
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <header class="py-8">
-    <h1 class="text-3xl font-bold text-primary">Components Library</h1>
-    <p class="mt-2 text-lg text-gray-600">Browse our collection of reusable components</p>
-  </header>
+# Components
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {% for component in collections.components %}
-    <div class="card">
-      <h2 class="text-xl font-semibold text-primary mb-2">{{ component.data.title }}</h2>
-      <p class="text-gray-600 mb-4">{{ component.data.description }}</p>
-      
-      {% if component.data.storybook %}
-      <div class="mb-4 h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <iframe
-          src="{{ component.data.storybook }}"
-          class="w-full h-full"
-          title="{{ component.data.title }} preview"
-        ></iframe>
-      </div>
-      {% endif %}
-      
-      <div class="flex flex-wrap gap-2">
-        {% if component.data.channel %}
-        <span class="meta-tag">{{ component.data.channel }}</span>
-        {% endif %}
-        
-        {% if component.data.type %}
-        <span class="meta-tag">{{ component.data.type }}</span>
-        {% endif %}
-        
-        {% if component.data.owner %}
-        <span class="meta-tag">{{ component.data.owner }}</span>
-        {% endif %}
-      </div>
-      
-      <div class="mt-4 flex gap-2">
-        <a href="{{ component.url }}" class="btn btn-primary">View Details</a>
-        {% if component.data.storybook %}
-        <a href="{{ component.data.storybook }}" class="btn bg-gray-100 hover:bg-gray-200 text-gray-700" target="_blank">Open in Storybook</a>
-        {% endif %}
-      </div>
+## Form Elements
+
+Our collection of form components designed for seamless user interaction.
+
+### Buttons
+
+Buttons are used to trigger actions or events. They come in different variants and sizes to suit your needs.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Primary Button</h4>
+    <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-fds">Click me</button>
+    <div class="mt-4">
+      <a href="/components/buttons" class="text-primary hover:underline">View Documentation →</a>
     </div>
-    {% endfor %}
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Secondary Button</h4>
+    <button class="border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-fds">Click me</button>
+    <div class="mt-4">
+      <a href="/components/buttons#secondary" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+</div>
+
+### Input Fields
+
+Text inputs, textareas, and other form fields for collecting user data.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Text Input</h4>
+    <input type="text" placeholder="Enter text..." class="w-full px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
+    <div class="mt-4">
+      <a href="/components/inputs" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Textarea</h4>
+    <textarea placeholder="Enter long text..." class="w-full px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary"></textarea>
+    <div class="mt-4">
+      <a href="/components/inputs#textarea" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+</div>
+
+## Navigation
+
+Components for helping users move through your application.
+
+### Breadcrumbs
+
+Help users understand their current location in a hierarchy.
+
+<div class="bg-white p-6 rounded-fds shadow-sm my-8">
+  <h4 class="font-semibold mb-4">Basic Breadcrumb</h4>
+  <nav class="flex space-x-2">
+    <a href="#" class="text-primary hover:underline">Home</a>
+    <span class="text-neutral-dark">/</span>
+    <a href="#" class="text-primary hover:underline">Components</a>
+    <span class="text-neutral-dark">/</span>
+    <span class="text-neutral-dark">Current Page</span>
+  </nav>
+  <div class="mt-4">
+    <a href="/components/navigation#breadcrumbs" class="text-primary hover:underline">View Documentation →</a>
+  </div>
+</div>
+
+## Data Display
+
+Components for displaying data and content effectively.
+
+### Cards
+
+Containers for organizing related content and actions.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-2">Basic Card</h4>
+    <p class="text-neutral-dark mb-4">A simple card with title and content.</p>
+    <a href="/components/cards" class="text-primary hover:underline">View Documentation →</a>
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-2">Interactive Card</h4>
+    <p class="text-neutral-dark mb-4">A card with hover and click states.</p>
+    <a href="/components/cards#interactive" class="text-primary hover:underline">View Documentation →</a>
   </div>
 </div>

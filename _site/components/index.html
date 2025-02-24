@@ -4,48 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <header class="py-8">
-    <h1 class="text-3xl font-bold text-primary">Components Library</h1>
-    <p class="mt-2 text-lg text-gray-600">Browse our collection of reusable components</p>
-  </header>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1 id="components" tabindex="-1">Components <a class="anchor" href="#components">#</a></h1>
+<h2 id="form-elements" tabindex="-1">Form Elements <a class="anchor" href="#form-elements">#</a></h2>
+<p>Our collection of form components designed for seamless user interaction.</p>
+<h3 id="buttons" tabindex="-1">Buttons <a class="anchor" href="#buttons">#</a></h3>
+<p>Buttons are used to trigger actions or events. They come in different variants and sizes to suit your needs.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Primary Button</h4>
+    <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-fds">Click me</button>
+    <div class="mt-4">
+      <a href="/components/buttons" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Secondary Button</h4>
+    <button class="border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-fds">Click me</button>
+    <div class="mt-4">
+      <a href="/components/buttons#secondary" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
 </div>
-
+<h3 id="input-fields" tabindex="-1">Input Fields <a class="anchor" href="#input-fields">#</a></h3>
+<p>Text inputs, textareas, and other form fields for collecting user data.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Text Input</h4>
+    <input type="text" placeholder="Enter text..." class="w-full px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
+    <div class="mt-4">
+      <a href="/components/inputs" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-4">Textarea</h4>
+    <textarea placeholder="Enter long text..." class="w-full px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary"></textarea>
+    <div class="mt-4">
+      <a href="/components/inputs#textarea" class="text-primary hover:underline">View Documentation →</a>
+    </div>
+  </div>
+</div>
+<h2 id="navigation" tabindex="-1">Navigation <a class="anchor" href="#navigation">#</a></h2>
+<p>Components for helping users move through your application.</p>
+<h3 id="breadcrumbs" tabindex="-1">Breadcrumbs <a class="anchor" href="#breadcrumbs">#</a></h3>
+<p>Help users understand their current location in a hierarchy.</p>
+<div class="bg-white p-6 rounded-fds shadow-sm my-8">
+  <h4 class="font-semibold mb-4">Basic Breadcrumb</h4>
+  <nav class="flex space-x-2">
+    <a href="#" class="text-primary hover:underline">Home</a>
+    <span class="text-neutral-dark">/</span>
+    <a href="#" class="text-primary hover:underline">Components</a>
+    <span class="text-neutral-dark">/</span>
+    <span class="text-neutral-dark">Current Page</span>
+  </nav>
+  <div class="mt-4">
+    <a href="/components/navigation#breadcrumbs" class="text-primary hover:underline">View Documentation →</a>
+  </div>
+</div>
+<h2 id="data-display" tabindex="-1">Data Display <a class="anchor" href="#data-display">#</a></h2>
+<p>Components for displaying data and content effectively.</p>
+<h3 id="cards" tabindex="-1">Cards <a class="anchor" href="#cards">#</a></h3>
+<p>Containers for organizing related content and actions.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-2">Basic Card</h4>
+    <p class="text-neutral-dark mb-4">A simple card with title and content.</p>
+    <a href="/components/cards" class="text-primary hover:underline">View Documentation →</a>
+  </div>
+  <div class="bg-white p-6 rounded-fds shadow-sm">
+    <h4 class="font-semibold mb-2">Interactive Card</h4>
+    <p class="text-neutral-dark mb-4">A card with hover and click states.</p>
+    <a href="/components/cards#interactive" class="text-primary hover:underline">View Documentation →</a>
+  </div>
+</div>
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#form-elements">Form Elements</a><ul><li><a href="#buttons">Buttons</a></li><li><a href="#input-fields">Input Fields</a></li></ul></li><li><a href="#navigation">Navigation</a><ul><li><a href="#breadcrumbs">Breadcrumbs</a></li></ul></li><li><a href="#data-display">Data Display</a><ul><li><a href="#cards">Cards</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

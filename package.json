@@ -1,13 +1,14 @@
 {
-  "name": "windsurf-project",
+  "name": "eds-docsite",
   "version": "1.0.0",
-  "description": "Design System Documentation with 11ty and Storybook",
+  "description": "Enterprise Design System Documentation",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && eleventy",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --minify",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --watch",
-    "start": "concurrently \"npm run watch:css\" \"eleventy --serve --port=3000\"",
+    "start": "npm run build:css && eleventy --serve --port=3000",
+    "dev": "concurrently \"npm run watch:css\" \"eleventy --serve --port=3000\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +24,9 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "lunr": "^2.3.9"
+    "eleventy-plugin-toc": "^1.1.5",
+    "lunr": "^2.3.9",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
   }
 }

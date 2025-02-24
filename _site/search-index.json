@@ -1,72 +1,97 @@
 [
   {
-    "id": "/",
-    "title": "Home",
-    "content": ""
+    "url": "/",
+    "title": "Home - Enterprise Design System",
+    "excerpt": ""
   },
   {
-    "id": "/about/",
+    "url": "/about/",
     "title": "About Us",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/docs/",
+    "url": "/docs/",
     "title": "Documentation",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/components/",
+    "url": "/components/",
     "title": "Components",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/search-index.json",
-    "title": "",
-    "content": ""
-  },
-  {
-    "id": "/channels/",
+    "url": "/channels/",
     "title": "Components by Channel",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/types/",
+    "url": "/types/",
     "title": "Components by Type",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/owners/",
+    "url": "/owners/",
     "title": "Components by Owner",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/support/fds/",
+    "url": "/support/fds/",
     "title": "FDS Support",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/support/partners/",
+    "url": "/support/partners/",
     "title": "FDS Partners",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/getting-started/",
+    "url": "/getting-started/",
     "title": "Getting Started",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/guidelines/",
+    "url": "/guidelines/",
     "title": "Design Guidelines",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/storybook/",
+    "url": "/storybook/",
     "title": "Storybook",
-    "content": ""
+    "excerpt": ""
   },
   {
-    "id": "/documentation/",
+    "url": "/documentation/",
     "title": "Documentation",
-    "content": ""
+    "excerpt": ""
+  },
+  {
+    "url": "/components/buttons/",
+    "title": "Buttons",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/forms/",
+    "title": "Form Elements",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/cards/",
+    "title": "Cards",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/navigation/",
+    "title": "Navigation",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/alerts/",
+    "title": "Alerts",
+    "excerpt": ""
+  },
+  {
+    "url": "/components/modals/",
+    "title": "Modals",
+    "excerpt": ""
   }
 ]

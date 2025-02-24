@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div class="prose prose-lg max-w-none">
     <h1 id="introduction" class="text-4xl font-bold text-primary mb-8">Getting Started</h1>
     

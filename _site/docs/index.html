@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <h1>Documentation</h1>
-<h2>Getting Started</h2>
-<h3>Prerequisites</h3>
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1>Documentation</h1>
+<h2 id="getting-started" tabindex="-1">Getting Started <a class="anchor" href="#getting-started" aria-hidden="true">#</a></h2>
+<h3 id="prerequisites" tabindex="-1">Prerequisites <a class="anchor" href="#prerequisites" aria-hidden="true">#</a></h3>
 <ul>
 <li>Node.js (v14 or higher)</li>
 <li>npm or yarn</li>
 <li>Basic knowledge of Markdown</li>
 </ul>
-<h3>Installation</h3>
+<h3 id="installation" tabindex="-1">Installation <a class="anchor" href="#installation" aria-hidden="true">#</a></h3>
 <pre><code class="language-bash"># Clone the repository
 git clone https://github.com/your-username/windsurf-project.git
 
@@ -55,7 +68,7 @@ npm install
 # Start development server
 npm start
 </code></pre>
-<h2>Project Structure</h2>
+<h2 id="project-structure" tabindex="-1">Project Structure <a class="anchor" href="#project-structure" aria-hidden="true">#</a></h2>
 <pre><code>windsurf-project/
 ├── _includes/          # Templates and components
 ├── css/               # Stylesheets
@@ -63,8 +76,8 @@ npm start
 ├── .eleventy.js       # Eleventy configuration
 └── package.json       # Project dependencies
 </code></pre>
-<h2>Creating Content</h2>
-<h3>Adding New Pages</h3>
+<h2 id="creating-content" tabindex="-1">Creating Content <a class="anchor" href="#creating-content" aria-hidden="true">#</a></h2>
+<h3 id="adding-new-pages" tabindex="-1">Adding New Pages <a class="anchor" href="#adding-new-pages" aria-hidden="true">#</a></h3>
 <ol>
 <li>Create a new <code>.md</code> file in the root directory</li>
 <li>Add the required front matter:<pre><code class="language-yaml">---
@@ -78,7 +91,7 @@ eleventyNavigation:
 </li>
 <li>Add your content using Markdown</li>
 </ol>
-<h3>Using Components</h3>
+<h3 id="using-components" tabindex="-1">Using Components <a class="anchor" href="#using-components" aria-hidden="true">#</a></h3>
 <p>To embed a Storybook component:</p>
 <pre><code class="language-html">&lt;div class=&quot;storybook-embed&quot;&gt;
     &lt;iframe
@@ -89,6 +102,21 @@ eleventyNavigation:
 &lt;/div&gt;
 </code></pre>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#getting-started">Getting Started</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a></li></ul></li><li><a href="#project-structure">Project Structure</a></li><li><a href="#creating-content">Creating Content</a><ul><li><a href="#adding-new-pages">Adding New Pages</a></li><li><a href="#using-components">Using Components</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

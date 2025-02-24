@@ -4,127 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-  <div class="mb-12">
-    <h1 class="text-4xl font-bold text-primary mb-4">Documentation</h1>
-    <p class="text-xl text-neutral-dark mb-8">Complete guide to using the Enterprise Design System</p>
-  </div>
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <!-- Left Sidebar Navigation -->
-    <div class="lg:col-span-1">
-      <nav class="sticky top-8 bg-neutral rounded-fds p-6">
-        <ul class="space-y-6">
-          <li>
-            <h3 class="font-medium text-neutral-dark mb-3">Getting Started</h3>
-            <ul class="space-y-2 ml-4">
-              <li><a href="#installation" class="text-primary hover:underline">Installation</a></li>
-              <li><a href="#setup" class="text-primary hover:underline">Setup</a></li>
-              <li><a href="#usage" class="text-primary hover:underline">Basic Usage</a></li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="font-medium text-neutral-dark mb-3">Design Guidelines</h3>
-            <ul class="space-y-2 ml-4">
-              <li><a href="#colors" class="text-primary hover:underline">Colors</a></li>
-              <li><a href="#typography" class="text-primary hover:underline">Typography</a></li>
-              <li><a href="#spacing" class="text-primary hover:underline">Spacing</a></li>
-              <li><a href="#components" class="text-primary hover:underline">Components</a></li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="font-medium text-neutral-dark mb-3">Components</h3>
-            <ul class="space-y-2 ml-4">
-              <li><a href="#buttons" class="text-primary hover:underline">Buttons</a></li>
-              <li><a href="#forms" class="text-primary hover:underline">Forms</a></li>
-              <li><a href="#navigation" class="text-primary hover:underline">Navigation</a></li>
-              <li><a href="#data-display" class="text-primary hover:underline">Data Display</a></li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="font-medium text-neutral-dark mb-3">Resources</h3>
-            <ul class="space-y-2 ml-4">
-              <li><a href="#examples" class="text-primary hover:underline">Examples</a></li>
-              <li><a href="#templates" class="text-primary hover:underline">Templates</a></li>
-              <li><a href="#tools" class="text-primary hover:underline">Tools</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-<p><!-- Main Content -->
-<div class="lg:col-span-2 space-y-12">
-<section id="installation" class="bg-neutral rounded-fds p-6">
-<h2 class="text-2xl font-bold text-primary mb-6">Installation</h2>
-<div class="prose prose-green max-w-none">
-<p>Get started with the Enterprise Design System by installing our package:</p>
-<pre class="bg-white rounded-fds p-4 my-4"><code>npm install @Enterprise/design-system</code></pre>
-<p>Or if you're using yarn:</p>
-<pre class="bg-white rounded-fds p-4 my-4"><code>yarn add @Enterprise/design-system</code></pre>
-</div>
-</section></p>
-<p><section id="setup" class="bg-neutral rounded-fds p-6">
-<h2 class="text-2xl font-bold text-primary mb-6">Setup</h2>
-<div class="prose prose-green max-w-none">
-<p>Import our styles in your main CSS file:</p>
-<pre class="bg-white rounded-fds p-4 my-4"><code>@import '@Enterprise/design-system/styles';</code></pre>
-<p>Or include it in your HTML:</p>
-<pre class="bg-white rounded-fds p-4 my-4"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@Enterprise/design-system/styles.css&quot;&gt;</code></pre>
-</div>
-</section></p>
-<p><section id="usage" class="bg-neutral rounded-fds p-6">
-<h2 class="text-2xl font-bold text-primary mb-6">Basic Usage</h2>
-<div class="prose prose-green max-w-none">
-<p>Start using our components by following our core principles:</p>
-<ul>
-<li>Use our predefined color palette</li>
-<li>Follow our spacing guidelines</li>
-<li>Maintain consistent border radius</li>
-<li>Implement proper typography</li>
-</ul>
-<p>Example of a primary button:</p>
-<pre class="bg-white rounded-fds p-4 my-4"><code>&lt;button class=&quot;bg-primary hover:bg-primary-dark text-white rounded-fds px-6 py-3&quot;&gt;
-Click me
-&lt;/button&gt;</code></pre>
-</div>
-</section></p>
-<p><!-- More sections will be added for each nav item -->
-</div></p>
-  </div>
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-bold text-primary mb-8">Documentation</h1>
+<h2 id="getting-started" tabindex="-1">Getting Started <a class="anchor" href="#getting-started" aria-hidden="true">#</a></h2>
+<p>This section covers the basics of using the Enterprise Design System.</p>
+<h3 id="installation" tabindex="-1">Installation <a class="anchor" href="#installation" aria-hidden="true">#</a></h3>
+<p>Learn how to install and set up the design system in your project.</p>
+<h3 id="basic-usage" tabindex="-1">Basic Usage <a class="anchor" href="#basic-usage" aria-hidden="true">#</a></h3>
+<p>Understand the core concepts and how to implement components.</p>
+<h2 id="advanced-topics" tabindex="-1">Advanced Topics <a class="anchor" href="#advanced-topics" aria-hidden="true">#</a></h2>
+<p>Dive deeper into the design system's advanced features.</p>
+<h3 id="customization" tabindex="-1">Customization <a class="anchor" href="#customization" aria-hidden="true">#</a></h3>
+<p>Learn how to customize components to match your brand.</p>
+<h3 id="best-practices" tabindex="-1">Best Practices <a class="anchor" href="#best-practices" aria-hidden="true">#</a></h3>
+<p>Follow our recommended best practices for optimal results.</p>
+<h2 id="troubleshooting" tabindex="-1">Troubleshooting <a class="anchor" href="#troubleshooting" aria-hidden="true">#</a></h2>
+<p>Common issues and their solutions.</p>
+<h3 id="known-issues" tabindex="-1">Known Issues <a class="anchor" href="#known-issues" aria-hidden="true">#</a></h3>
+<p>List of known issues and their workarounds.</p>
+<h3 id="support" tabindex="-1">Support <a class="anchor" href="#support" aria-hidden="true">#</a></h3>
+<p>How to get help when you need it.</p>
 </div>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#getting-started">Getting Started</a><ul><li><a href="#installation">Installation</a></li><li><a href="#basic-usage">Basic Usage</a></li></ul></li><li><a href="#advanced-topics">Advanced Topics</a><ul><li><a href="#customization">Customization</a></li><li><a href="#best-practices">Best Practices</a></li></ul></li><li><a href="#troubleshooting">Troubleshooting</a><ul><li><a href="#known-issues">Known Issues</a></li><li><a href="#support">Support</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

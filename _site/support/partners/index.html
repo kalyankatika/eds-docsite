@@ -4,43 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FDS Partners - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <h1>FDS Partners</h1>
-<h2>Working with FDS Partners</h2>
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1>FDS Partners</h1>
+<h2 id="working-with-fds-partners" tabindex="-1">Working with FDS Partners <a class="anchor" href="#working-with-fds-partners" aria-hidden="true">#</a></h2>
 <p>FDS works with various teams and partners across Enterprise to ensure consistent design and implementation of our components.</p>
-<h3>Partner Teams</h3>
+<h3 id="partner-teams" tabindex="-1">Partner Teams <a class="anchor" href="#partner-teams" aria-hidden="true">#</a></h3>
 <ul>
 <li>UX Design Team</li>
 <li>Accessibility Team</li>
@@ -48,7 +61,7 @@
 <li>Security Team</li>
 <li>Mobile Development Team</li>
 </ul>
-<h3>Collaboration Process</h3>
+<h3 id="collaboration-process" tabindex="-1">Collaboration Process <a class="anchor" href="#collaboration-process" aria-hidden="true">#</a></h3>
 <ol>
 <li>
 <p><strong>Design Review</strong></p>
@@ -77,7 +90,7 @@
 </ul>
 </li>
 </ol>
-<h3>Becoming a Partner</h3>
+<h3 id="becoming-a-partner" tabindex="-1">Becoming a Partner <a class="anchor" href="#becoming-a-partner" aria-hidden="true">#</a></h3>
 <p>If you're interested in becoming an FDS partner:</p>
 <ol>
 <li>Review our <a href="/guidelines">partnership guidelines</a></li>
@@ -85,13 +98,28 @@
 <li>Complete the partner onboarding process</li>
 <li>Start contributing to the design system</li>
 </ol>
-<h3>Contact</h3>
+<h3 id="contact" tabindex="-1">Contact <a class="anchor" href="#contact" aria-hidden="true">#</a></h3>
 <p>For partnership inquiries:</p>
 <ul>
-<li>Email: fds-partnerships@Enterprise.com</li>
+<li>Email: <a href="mailto:fds-partnerships@Enterprise.com">fds-partnerships@Enterprise.com</a></li>
 <li>Slack: #fds-partners</li>
 </ul>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#working-with-fds-partners">Working with FDS Partners</a><ul><li><a href="#partner-teams">Partner Teams</a></li><li><a href="#collaboration-process">Collaboration Process</a></li><li><a href="#becoming-a-partner">Becoming a Partner</a></li><li><a href="#contact">Contact</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

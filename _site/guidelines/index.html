@@ -4,128 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Guidelines - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <h1>Design Guidelines</h1>
-<h2>Design Principles</h2>
-<h3>1. Consistency</h3>
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1>Design Guidelines</h1>
+<h2 id="design-principles" tabindex="-1">Design Principles <a class="anchor" href="#design-principles" aria-hidden="true">#</a></h2>
+<h3 id="1.-consistency" tabindex="-1">1. Consistency <a class="anchor" href="#1.-consistency" aria-hidden="true">#</a></h3>
 <ul>
 <li>Use consistent patterns and components</li>
 <li>Follow established naming conventions</li>
 <li>Maintain visual hierarchy</li>
 </ul>
-<h3>2. Accessibility</h3>
+<h3 id="2.-accessibility" tabindex="-1">2. Accessibility <a class="anchor" href="#2.-accessibility" aria-hidden="true">#</a></h3>
 <ul>
 <li>Follow WCAG 2.1 guidelines</li>
 <li>Ensure keyboard navigation</li>
 <li>Maintain proper color contrast</li>
 <li>Provide meaningful alt text</li>
 </ul>
-<h3>3. Performance</h3>
+<h3 id="3.-performance" tabindex="-1">3. Performance <a class="anchor" href="#3.-performance" aria-hidden="true">#</a></h3>
 <ul>
 <li>Optimize component loading</li>
 <li>Minimize bundle size</li>
 <li>Follow code splitting best practices</li>
 <li>Implement lazy loading where appropriate</li>
 </ul>
-<h3>4. Responsiveness</h3>
+<h3 id="4.-responsiveness" tabindex="-1">4. Responsiveness <a class="anchor" href="#4.-responsiveness" aria-hidden="true">#</a></h3>
 <ul>
 <li>Design mobile-first</li>
 <li>Use flexible layouts</li>
 <li>Implement proper breakpoints</li>
 <li>Test across devices</li>
 </ul>
-<h2>Component Guidelines</h2>
-<h3>Structure</h3>
+<h2 id="component-guidelines" tabindex="-1">Component Guidelines <a class="anchor" href="#component-guidelines" aria-hidden="true">#</a></h2>
+<h3 id="structure" tabindex="-1">Structure <a class="anchor" href="#structure" aria-hidden="true">#</a></h3>
 <ul>
 <li>Keep components modular</li>
 <li>Follow single responsibility principle</li>
 <li>Document props and types</li>
 <li>Include usage examples</li>
 </ul>
-<h3>Styling</h3>
+<h3 id="styling" tabindex="-1">Styling <a class="anchor" href="#styling" aria-hidden="true">#</a></h3>
 <ul>
 <li>Use CSS-in-JS or CSS Modules</li>
 <li>Follow BEM naming convention</li>
 <li>Implement design tokens</li>
 <li>Maintain consistent spacing</li>
 </ul>
-<h3>Testing</h3>
+<h3 id="testing" tabindex="-1">Testing <a class="anchor" href="#testing" aria-hidden="true">#</a></h3>
 <ul>
 <li>Write unit tests</li>
 <li>Include integration tests</li>
 <li>Test accessibility</li>
 <li>Document test cases</li>
 </ul>
-<h3>Documentation</h3>
+<h3 id="documentation" tabindex="-1">Documentation <a class="anchor" href="#documentation" aria-hidden="true">#</a></h3>
 <ul>
 <li>Provide clear examples</li>
 <li>Include prop documentation</li>
 <li>Show different variations</li>
 <li>Document best practices</li>
 </ul>
-<h2>Contributing Guidelines</h2>
-<h3>Code Standards</h3>
+<h2 id="contributing-guidelines" tabindex="-1">Contributing Guidelines <a class="anchor" href="#contributing-guidelines" aria-hidden="true">#</a></h2>
+<h3 id="code-standards" tabindex="-1">Code Standards <a class="anchor" href="#code-standards" aria-hidden="true">#</a></h3>
 <ul>
 <li>Follow ESLint configuration</li>
 <li>Use TypeScript</li>
 <li>Write meaningful commit messages</li>
 <li>Review pull request guidelines</li>
 </ul>
-<h3>Design Contributions</h3>
+<h3 id="design-contributions" tabindex="-1">Design Contributions <a class="anchor" href="#design-contributions" aria-hidden="true">#</a></h3>
 <ul>
 <li>Submit design proposals</li>
 <li>Follow design review process</li>
 <li>Include use cases</li>
 <li>Provide design rationale</li>
 </ul>
-<h3>Documentation Updates</h3>
+<h3 id="documentation-updates" tabindex="-1">Documentation Updates <a class="anchor" href="#documentation-updates" aria-hidden="true">#</a></h3>
 <ul>
 <li>Keep docs up to date</li>
 <li>Include code examples</li>
 <li>Document breaking changes</li>
 <li>Update migration guides</li>
 </ul>
-<h2>Version Control</h2>
-<h3>Semantic Versioning</h3>
+<h2 id="version-control" tabindex="-1">Version Control <a class="anchor" href="#version-control" aria-hidden="true">#</a></h2>
+<h3 id="semantic-versioning" tabindex="-1">Semantic Versioning <a class="anchor" href="#semantic-versioning" aria-hidden="true">#</a></h3>
 <ul>
 <li>Follow SemVer</li>
 <li>Document breaking changes</li>
 <li>Maintain changelog</li>
 <li>Provide migration guides</li>
 </ul>
-<h3>Release Process</h3>
+<h3 id="release-process" tabindex="-1">Release Process <a class="anchor" href="#release-process" aria-hidden="true">#</a></h3>
 <ul>
 <li>Review release checklist</li>
 <li>Test release candidates</li>
@@ -133,6 +146,21 @@
 <li>Communicate changes</li>
 </ul>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#design-principles">Design Principles</a><ul><li><a href="#1.-consistency">1. Consistency</a></li><li><a href="#2.-accessibility">2. Accessibility</a></li><li><a href="#3.-performance">3. Performance</a></li><li><a href="#4.-responsiveness">4. Responsiveness</a></li></ul></li><li><a href="#component-guidelines">Component Guidelines</a><ul><li><a href="#structure">Structure</a></li><li><a href="#styling">Styling</a></li><li><a href="#testing">Testing</a></li><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#contributing-guidelines">Contributing Guidelines</a><ul><li><a href="#code-standards">Code Standards</a></li><li><a href="#design-contributions">Design Contributions</a></li><li><a href="#documentation-updates">Documentation Updates</a></li></ul></li><li><a href="#version-control">Version Control</a><ul><li><a href="#semantic-versioning">Semantic Versioning</a></li><li><a href="#release-process">Release Process</a></li></ul></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

@@ -1,12 +1,13 @@
 ---
 permalink: /search-index.json
+eleventyExcludeFromCollections: true
 ---
 [
-{%- for item in collections.all %}
+{%- for page in collections.all %}
   {
-    "id": "{{ item.url }}",
-    "title": "{{ item.data.title }}",
-    "content": "{{ item.template.inputContent | striptags }}"
+    "url": "{{ page.url }}",
+    "title": "{{ page.data.title | default(page.url) | safe }}",
+    "excerpt": "{% if page.data.description %}{{ page.data.description | safe }}{% else %}{{ (page.data.content or page.data.body or '') | striptags | truncate(150) | safe }}{% endif %}"
   }{% if not loop.last %},{% endif %}
 {%- endfor %}
 ]

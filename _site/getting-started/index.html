@@ -4,90 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting Started - Enterprise Design System</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-neutral min-h-screen">
-    <header class="border-b border-neutral-dark/10">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-primary hover:text-primary-dark">
-                        Enterprise Design System
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
                         <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
                         <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
                         <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
                         <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center">
+                    </nav>
                     <div class="relative">
                         <input type="search" 
-                               placeholder="Search..." 
-                               class="w-64 px-4 py-2 rounded-fds border border-neutral-dark/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white">
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div class="prose prose-lg max-w-none">
     <h1 id="introduction" class="text-4xl font-bold text-primary mb-8">Getting Started</h1>
-<p><!-- Introduction -->
-<section class="mb-12">
-<h2 class="text-2xl font-bold text-primary mb-4">Introduction</h2>
-<p class="text-neutral-dark mb-6">
-The Enterprise Design System provides a comprehensive set of guidelines, components, and tools
-to help teams build consistent and high-quality digital experiences across all Enterprise platforms.
-</p>
+<p><!-- Introduction --><br>
+<section class="mb-12"><br>
+<h2 class="text-2xl font-bold text-primary mb-4">Introduction</h2><br>
+<p class="text-neutral-dark mb-6"><br>
+The Enterprise Design System provides a comprehensive set of guidelines, components, and tools<br>
+to help teams build consistent and high-quality digital experiences across all Enterprise platforms.<br>
+</p><br>
 </section></p>
-<p><!-- Installation -->
-<section class="mb-12">
-<h2 id="installation" class="text-2xl font-bold text-primary mb-4">Installation</h2>
-<p class="text-neutral-dark mb-6">
-Install the Enterprise Design System using npm:
-</p>
-<pre class="bg-neutral p-4 rounded-fds mb-6"><code>npm install @Enterprise/design-system</code></pre>
+<p><!-- Installation --><br>
+<section class="mb-12"><br>
+<h2 id="installation" class="text-2xl font-bold text-primary mb-4">Installation</h2><br>
+<p class="text-neutral-dark mb-6"><br>
+Install the Enterprise Design System using npm:<br>
+</p><br>
+<pre class="bg-neutral p-4 rounded-fds mb-6"><code>npm install @Enterprise/design-system</code></pre><br>
 </section></p>
-<p><!-- Usage -->
-<section class="mb-12">
-<h2 id="usage" class="text-2xl font-bold text-primary mb-4">Usage</h2>
-<p class="text-neutral-dark mb-6">
-Import and use components in your application:
-</p>
-<pre class="bg-neutral p-4 rounded-fds"><code>import { Button, Card } from '@Enterprise/design-system';</code></pre>
+<p><!-- Usage --><br>
+<section class="mb-12"><br>
+<h2 id="usage" class="text-2xl font-bold text-primary mb-4">Usage</h2><br>
+<p class="text-neutral-dark mb-6"><br>
+Import and use components in your application:<br>
+</p><br>
+<pre class="bg-neutral p-4 rounded-fds"><code>import { Button, Card } from '@Enterprise/design-system';</code></pre><br>
 </section></p>
-<p><!-- Next Steps -->
-<section class="mb-12">
-<h2 class="text-2xl font-bold text-primary mb-4">Next Steps</h2>
-<ul class="space-y-4">
-<li>
-<a href="/foundation/colors" class="text-primary hover:text-primary-dark">
-→ Explore our color system
-</a>
-</li>
-<li>
-<a href="/components" class="text-primary hover:text-primary-dark">
-→ Browse our component library
-</a>
-</li>
-<li>
-<a href="/guidelines" class="text-primary hover:text-primary-dark">
-→ Read our design guidelines
-</a>
-</li>
-</ul>
+<p><!-- Next Steps --><br>
+<section class="mb-12"><br>
+<h2 class="text-2xl font-bold text-primary mb-4">Next Steps</h2><br>
+<ul class="space-y-4"><br>
+<li><br>
+<a href="/foundation/colors" class="text-primary hover:text-primary-dark"><br>
+→ Explore our color system<br>
+</a><br>
+</li><br>
+<li><br>
+<a href="/components" class="text-primary hover:text-primary-dark"><br>
+→ Browse our component library<br>
+</a><br>
+</li><br>
+<li><br>
+<a href="/guidelines" class="text-primary hover:text-primary-dark"><br>
+→ Read our design guidelines<br>
+</a><br>
+</li><br>
+</ul><br>
 </section></p>
   </div>
 </div>
 
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <div class="toc" >
+        <ul><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a></li></ul>
+      </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="mt-16 py-8 border-t border-neutral-dark/10">

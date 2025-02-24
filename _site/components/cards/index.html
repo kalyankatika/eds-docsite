@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Enterprise Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
+                        <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
+                        <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
+                        <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
+                    </nav>
+                    <div class="relative">
+                        <input type="search" 
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-3xl font-bold text-primary mb-8">Cards</h1>
+  <!-- Storybook Example -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold text-primary mb-4">Interactive Example</h2>
+    <div class="w-full bg-white rounded-fds shadow-sm p-4">
+      <iframe
+        src="https://5ccbc373887ca40020446347-wtuhidckxo.chromatic.com/iframe.html?id=card--default&viewMode=story&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        class="border-0 rounded-fds"
+        title="Card Component Example"
+      ></iframe>
+    </div>
+  </section>
+  <div class="space-y-12">
+    <!-- Basic Cards -->
+    <section>
+      <h2 class="text-2xl font-semibold text-primary mb-4">Basic Cards</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-fds shadow-sm">
+          <h3 class="text-lg font-semibold text-primary mb-2">Basic Card</h3>
+          <p class="text-neutral-dark">A simple card with basic styling and padding.</p>
+        </div>
+<p><div class="bg-white p-6 rounded-fds shadow-sm border border-neutral-dark/10"><br>
+<h3 class="text-lg font-semibold text-primary mb-2">Bordered Card</h3><br>
+<p class="text-neutral-dark">A card with an additional border for emphasis.</p><br>
+</div><br>
+</div><br>
+</section></p>
+<p><!-- Interactive Cards --><br>
+<section><br>
+<h2 class="text-2xl font-semibold text-primary mb-4">Interactive Cards</h2><br>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><br>
+<a href="#" class="block bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow"><br>
+<h3 class="text-lg font-semibold text-primary mb-2">Clickable Card</h3><br>
+<p class="text-neutral-dark">This entire card is clickable with hover effects.</p><br>
+</a></p>
+<p><div class="bg-white p-6 rounded-fds shadow-sm"><br>
+<h3 class="text-lg font-semibold text-primary mb-2">Card with Button</h3><br>
+<p class="text-neutral-dark mb-4">A card with an interactive button.</p><br>
+<button class="px-4 py-2 bg-primary text-white rounded-fds hover:bg-primary-dark"><br>
+Action<br>
+</button><br>
+</div><br>
+</div><br>
+</section></p>
+  </div>
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 py-8 border-t border-neutral-dark/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-neutral-dark">
+                <p>&copy; 2025 Enterprise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
