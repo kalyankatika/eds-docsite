@@ -1,4 +1,3 @@
-
 ---
 layout: base.njk
 title: Home - Enterprise Design System
