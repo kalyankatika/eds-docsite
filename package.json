@@ -4,7 +4,9 @@
   "description": "Enterprise Design System Documentation",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:css && eleventy",
+    "convert-legacy": "node _scripts/njx-to-md.js",
+    "update-nav": "node _scripts/update-navigation.js",
+    "build": "npm run convert-legacy && npm run update-nav && npm run build:css && eleventy",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --minify",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --watch",
     "start": "npm run build:css && eleventy --serve --port=3000",
@@ -25,6 +27,7 @@
   },
   "dependencies": {
     "eleventy-plugin-toc": "^1.1.5",
+    "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0"
