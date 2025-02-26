@@ -65,11 +65,6 @@
     "excerpt": ""
   },
   {
-    "url": "/",
-    "title": "Home - Enterprise Design System",
-    "excerpt": ""
-  },
-  {
     "url": "/owners/",
     "title": "Components by Owner",
     "excerpt": ""
@@ -92,6 +87,11 @@
   {
     "url": "/types/",
     "title": "Components by Type",
+    "excerpt": ""
+  },
+  {
+    "url": "/",
+    "title": "Home - Enterprise Design System",
     "excerpt": ""
   }
 ]
