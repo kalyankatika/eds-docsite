@@ -93,5 +93,15 @@
     "url": "/",
     "title": "Home - Enterprise Design System",
     "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/README/",
+    "title": "/legacy-imports/README/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site1/sample/",
+    "title": "/legacy-imports/site1/sample/",
+    "excerpt": ""
   }
 ]

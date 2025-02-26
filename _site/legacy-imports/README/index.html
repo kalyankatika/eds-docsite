@@ -1,0 +1,40 @@
+<h1>Legacy Documentation Import Guide</h1>
+<p>This directory contains imported documentation from three legacy documentation sites.</p>
+<h2 id="structure" tabindex="-1">Structure <a class="anchor" href="#structure" aria-hidden="true">#</a></h2>
+<ul>
+<li><code>site1/</code>: Contains documentation from the first legacy site</li>
+<li><code>site2/</code>: Contains documentation from the second legacy site</li>
+<li><code>site3/</code>: Contains documentation from the third legacy site</li>
+</ul>
+<h2 id="how-to-import-new-content" tabindex="-1">How to Import New Content <a class="anchor" href="#how-to-import-new-content" aria-hidden="true">#</a></h2>
+<ol>
+<li>Place <code>.md</code> or <code>.njx</code> files in the appropriate legacy site directory</li>
+<li>The build process will automatically:
+<ul>
+<li>Convert <code>.njx</code> files to <code>.md</code> format</li>
+<li>Update the navigation structure</li>
+<li>Build the site with the new content</li>
+</ul>
+</li>
+</ol>
+<h2 id="manual-import" tabindex="-1">Manual Import <a class="anchor" href="#manual-import" aria-hidden="true">#</a></h2>
+<p>To manually import and process legacy files:</p>
+<pre><code>npm run convert-legacy   # Convert .njx to .md
+npm run update-nav       # Update navigation
+npm run build            # Build the site
+</code></pre>
+<h2 id="notes-on-file-format" tabindex="-1">Notes on File Format <a class="anchor" href="#notes-on-file-format" aria-hidden="true">#</a></h2>
+<ul>
+<li><code>.njx</code> files are automatically converted to <code>.md</code> during build</li>
+<li>Frontmatter should include proper eleventyNavigation data for navigation integration</li>
+<li>Example frontmatter:</li>
+</ul>
+<pre><code class="language-yaml">---
+layout: base.njk
+title: My Legacy Document
+eleventyNavigation:
+  key: LegacyDoc
+  parent: Documentation
+  order: 100
+---
+</code></pre>
