@@ -35,6 +35,27 @@
     "parent": null
   },
   {
+    "key": "Legacy Button",
+    "title": "Legacy Button",
+    "url": "/legacy-imports/site1/button",
+    "order": 110,
+    "parent": "Components"
+  },
+  {
+    "key": "Legacy Sample 2",
+    "title": "Legacy Sample 2",
+    "url": "/legacy-imports/site2/sample",
+    "order": 115,
+    "parent": "Components"
+  },
+  {
+    "key": "Legacy Alert",
+    "title": "Legacy Alert",
+    "url": "/legacy-imports/site3/alert",
+    "order": 130,
+    "parent": "Components"
+  },
+  {
     "key": "Home",
     "title": "Home",
     "url": "/index",

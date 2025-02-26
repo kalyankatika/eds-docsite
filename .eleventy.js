@@ -44,8 +44,9 @@ module.exports = function(eleventyConfig) {
         return headings.map(heading => {
             const level = heading.charAt(2);
             const text = heading.replace(/<[^>]*>/g, '').trim();
-            // Skip frontmatter that may appear as a heading
-            if (text.includes('layout:') || text.includes('eleventyNavigation:')) {
+            // Skip headings that look like frontmatter
+            if (text.includes('layout:') || text.includes('eleventyNavigation:') || 
+                text.includes('title:') || text.includes('key:')) {
                 return '';
             }
             const slug = text.toLowerCase().replace(/[^\w]+/g, '-');

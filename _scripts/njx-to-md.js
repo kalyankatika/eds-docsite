@@ -35,31 +35,37 @@ function convertNjxToMd(njxFilePath) {
     const mdFilePath = njxFilePath.replace('.njx', '.md');
     
     // Reconstruct the content with frontmatter
-    let mdContent = '';
+    let mdContent = '---\n';
     
-    // Add frontmatter if it exists
-    if (Object.keys(parsedContent.data).length > 0) {
-      mdContent = '---\n';
-      
-      // Add each frontmatter field
-      Object.entries(parsedContent.data).forEach(([key, value]) => {
-        if (typeof value === 'object') {
-          mdContent += `${key}:\n`;
-          
-          // Handle nested objects like eleventyNavigation
-          Object.entries(value).forEach(([nestedKey, nestedValue]) => {
-            mdContent += `  ${nestedKey}: ${nestedValue}\n`;
-          });
-        } else {
-          mdContent += `${key}: ${value}\n`;
-        }
-      });
-      
-      mdContent += '---\n\n';
+    // Add each frontmatter field
+    Object.entries(parsedContent.data).forEach(([key, value]) => {
+      if (typeof value === 'object') {
+        mdContent += `${key}:\n`;
+        
+        // Handle nested objects like eleventyNavigation
+        Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+          mdContent += `  ${nestedKey}: ${nestedValue}\n`;
+        });
+      } else {
+        mdContent += `${key}: ${value}\n`;
+      }
+    });
+    
+    mdContent += '---\n\n';
+    
+    // Add the content body - remove any existing frontmatter that may be in the content
+    const contentBody = parsedContent.content.trim();
+    if (contentBody.startsWith('---')) {
+      // If there's frontmatter in the content body, remove it
+      const secondFrontmatterEnd = contentBody.indexOf('---', 3);
+      if (secondFrontmatterEnd !== -1) {
+        mdContent += contentBody.substring(secondFrontmatterEnd + 3).trim();
+      } else {
+        mdContent += contentBody;
+      }
+    } else {
+      mdContent += contentBody;
     }
-    
-    // Add the content body
-    mdContent += parsedContent.content;
     
     // Write content to .md file
     fs.writeFileSync(mdFilePath, mdContent);

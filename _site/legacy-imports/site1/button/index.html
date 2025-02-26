@@ -1,11 +1,56 @@
-<hr>
-<h2 id="layout%3A-base.njktitle%3A-legacy-button-componenteleventynavigation%3Akey%3A-legacy-buttonparent%3A-componentsorder%3A-110" tabindex="-1">layout: base.njk<br>
-title: Legacy Button Component<br>
-eleventyNavigation:<br>
-key: Legacy Button<br>
-parent: Components<br>
-order: 110 <a class="anchor" href="#layout%3A-base.njktitle%3A-legacy-button-componenteleventynavigation%3Akey%3A-legacy-buttonparent%3A-componentsorder%3A-110" aria-hidden="true">#</a></h2>
-<h1>Legacy Button Component</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Button Component - Enterprise Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        'primary-dark': '#115E59',
+                        neutral: '#F9FAFB',
+                        'neutral-dark': '#4B5563'
+                    },
+                    borderRadius: {
+                        'fds': '0.375rem'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-xl font-bold text-primary">Enterprise Design System</a>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="/getting-started" class="text-neutral-dark hover:text-primary">Getting Started</a>
+                        <a href="/components" class="text-neutral-dark hover:text-primary">Components</a>
+                        <a href="/storybook" class="text-neutral-dark hover:text-primary">Storybook</a>
+                        <a href="/documentation" class="text-neutral-dark hover:text-primary">Documentation</a>
+                    </nav>
+                    <div class="relative">
+                        <input type="search" 
+                               id="search-input"
+                               placeholder="Search..."
+                               class="w-64 px-4 py-2 border border-neutral-dark/20 rounded-fds focus:border-primary focus:ring-1 focus:ring-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row py-8">
+                <div class="flex-1">
+                    <h1>Legacy Button Component</h1>
 <p>This is a legacy button component from site 1.</p>
 <h2 id="usage" tabindex="-1">Usage <a class="anchor" href="#usage" aria-hidden="true">#</a></h2>
 <pre><code class="language-html">&lt;button class=&quot;legacy-btn legacy-btn-primary&quot;&gt;Primary Button&lt;/button&gt;
@@ -47,48 +92,30 @@ order: 110 <a class="anchor" href="#layout%3A-base.njktitle%3A-legacy-button-com
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="layout%3A-base.njktitle%3A-legacy-button-componenteleventynavigation%3Akey%3A-legacy-buttonparent%3A-componentsorder%3A-110-1" tabindex="-1">layout: base.njk<br>
-title: Legacy Button Component<br>
-eleventyNavigation:<br>
-key: Legacy Button<br>
-parent: Components<br>
-order: 110 <a class="anchor" href="#layout%3A-base.njktitle%3A-legacy-button-componenteleventynavigation%3Akey%3A-legacy-buttonparent%3A-componentsorder%3A-110-1" aria-hidden="true">#</a></h2>
-<h1>Legacy Button Component</h1>
-<p>This is a legacy button component from site 1.</p>
-<h2 id="usage-1" tabindex="-1">Usage <a class="anchor" href="#usage-1" aria-hidden="true">#</a></h2>
-<pre><code class="language-html">&lt;button class=&quot;legacy-btn legacy-btn-primary&quot;&gt;Primary Button&lt;/button&gt;
-&lt;button class=&quot;legacy-btn legacy-btn-secondary&quot;&gt;Secondary Button&lt;/button&gt;
-</code></pre>
-<h2 id="examples-1" tabindex="-1">Examples <a class="anchor" href="#examples-1" aria-hidden="true">#</a></h2>
-<div class="my-6 space-x-2">
-  <button class="bg-blue-500 text-white px-4 py-2 rounded">Primary Button</button>
-  <button class="bg-gray-300 text-gray-800 px-4 py-2 rounded">Secondary Button</button>
-</div>
-<h2 id="properties-1" tabindex="-1">Properties <a class="anchor" href="#properties-1" aria-hidden="true">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>string</td>
-<td>Button size (small, medium, large)</td>
-</tr>
-<tr>
-<td>variant</td>
-<td>string</td>
-<td>Button variant (primary, secondary, tertiary)</td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>boolean</td>
-<td>Whether the button is disabled</td>
-</tr>
-</tbody>
-</table>
+
+                </div>
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
+                        <nav class="space-y-2">
+                            <a href="#usage-" class=" block text-neutral-dark hover:text-primary">Usage #</a>
+<a href="#examples-" class=" block text-neutral-dark hover:text-primary">Examples #</a>
+<a href="#properties-" class=" block text-neutral-dark hover:text-primary">Properties #</a>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 py-8 border-t border-neutral-dark/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-neutral-dark">
+                <p>&copy; 2025 Enterprise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

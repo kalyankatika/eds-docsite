@@ -96,7 +96,7 @@
   },
   {
     "url": "/legacy-imports/site2/sample/",
-    "title": "/legacy-imports/site2/sample/",
+    "title": "Legacy Sample from Site 2",
     "excerpt": ""
   },
   {
@@ -116,7 +116,7 @@
   },
   {
     "url": "/legacy-imports/site1/button/",
-    "title": "/legacy-imports/site1/button/",
+    "title": "Legacy Button Component",
     "excerpt": ""
   },
   {
@@ -126,7 +126,7 @@
   },
   {
     "url": "/legacy-imports/site3/alert/",
-    "title": "/legacy-imports/site3/alert/",
+    "title": "Legacy Alert Component",
     "excerpt": ""
   }
 ]
