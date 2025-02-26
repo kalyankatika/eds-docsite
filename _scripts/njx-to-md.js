@@ -29,7 +29,7 @@ function convertNjxToMd(njxFilePath) {
     const content = fs.readFileSync(njxFilePath, 'utf8');
     
     // Parse frontmatter if exists
-    const parsedContent = matter(content);
+    let parsedContent = matter(content);
     
     // Create .md file path
     const mdFilePath = njxFilePath.replace('.njx', '.md');
