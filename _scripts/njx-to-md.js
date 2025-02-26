@@ -1,9 +1,11 @@
+
 /**
  * Script to convert .njx to .md files
  * Run this during the build process to automatically convert legacy .njx files
  */
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
 // Directories to scan for .njx files
 const legacyDirs = [
@@ -24,14 +26,53 @@ legacyDirs.forEach(dir => {
 function convertNjxToMd(njxFilePath) {
   // Read the .njx file
   const content = fs.readFileSync(njxFilePath, 'utf8');
-
-  // Create .md file path
-  const mdFilePath = njxFilePath.replace('.njx', '.md');
-
-  // Write content to .md file
-  fs.writeFileSync(mdFilePath, content);
-
-  console.log(`Converted ${njxFilePath} to ${mdFilePath}`);
+  
+  try {
+    // Parse frontmatter if exists
+    const parsedContent = matter(content);
+    
+    // Create .md file path
+    const mdFilePath = njxFilePath.replace('.njx', '.md');
+    
+    // Reconstruct the content with frontmatter
+    let mdContent = '';
+    
+    // Add frontmatter if it exists
+    if (Object.keys(parsedContent.data).length > 0) {
+      mdContent = '---\n';
+      
+      // Add each frontmatter field
+      Object.entries(parsedContent.data).forEach(([key, value]) => {
+        if (typeof value === 'object') {
+          mdContent += `${key}:\n`;
+          
+          // Handle nested objects like eleventyNavigation
+          Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+            mdContent += `  ${nestedKey}: ${nestedValue}\n`;
+          });
+        } else {
+          mdContent += `${key}: ${value}\n`;
+        }
+      });
+      
+      mdContent += '---\n\n';
+    }
+    
+    // Add the content body
+    mdContent += parsedContent.content;
+    
+    // Write content to .md file
+    fs.writeFileSync(mdFilePath, mdContent);
+    
+    console.log(`Converted ${njxFilePath} to ${mdFilePath}`);
+  } catch (error) {
+    console.error(`Error parsing frontmatter in ${njxFilePath}:`, error);
+    
+    // Fallback to direct copy if frontmatter parsing fails
+    const mdFilePath = njxFilePath.replace('.njx', '.md');
+    fs.writeFileSync(mdFilePath, content);
+    console.log(`Converted ${njxFilePath} to ${mdFilePath} (without frontmatter processing)`);
+  }
 }
 
 function processDirectory(directory) {

@@ -43,11 +43,15 @@ module.exports = function(eleventyConfig) {
         
         return headings.map(heading => {
             const level = heading.charAt(2);
-            const text = heading.replace(/<[^>]*>/g, '');
+            const text = heading.replace(/<[^>]*>/g, '').trim();
+            // Skip frontmatter that may appear as a heading
+            if (text.includes('layout:') || text.includes('eleventyNavigation:')) {
+                return '';
+            }
             const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
             const indent = level === '3' ? 'ml-4' : '';
             return `<a href="#${slug}" class="${indent} block text-neutral-dark hover:text-primary">${text}</a>`;
-        }).join('\\n');
+        }).filter(Boolean).join('\n');
     });
 
     // Pass through files

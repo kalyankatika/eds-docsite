@@ -4,14 +4,14 @@
   "description": "Enterprise Design System Documentation",
   "main": "index.js",
   "scripts": {
-    "convert-legacy": "node _scripts/njx-to-md.js",
-    "update-nav": "node _scripts/update-navigation.js",
-    "build": "npm run convert-legacy && npm run update-nav && npm run build:css && eleventy",
+    "build": "node _scripts/njx-to-md.js && node _scripts/update-navigation.js && npm run build:css && eleventy",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --minify",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./_site/css/style.css --watch",
-    "start": "npm run build:css && eleventy --serve --port=3000",
-    "dev": "concurrently \"npm run watch:css\" \"eleventy --serve --port=3000\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node _scripts/njx-to-md.js && node _scripts/update-navigation.js && npm run build:css && eleventy --serve --port=3000",
+    "dev": "concurrently \"npm run watch:css\" \"node _scripts/njx-to-md.js && node _scripts/update-navigation.js && npm run build:css && eleventy --serve --port=3000\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert-legacy": "node _scripts/njx-to-md.js",
+    "update-nav": "node _scripts/update-navigation.js"
   },
   "keywords": [],
   "author": "",
