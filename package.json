@@ -11,7 +11,8 @@
     "dev": "concurrently \"npm run watch:css\" \"node _scripts/njx-to-md.js && node _scripts/update-navigation.js && npm run build:css && eleventy --serve --port=3000\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert-legacy": "node _scripts/njx-to-md.js",
-    "update-nav": "node _scripts/update-navigation.js"
+    "update-nav": "node _scripts/update-navigation.js",
+    "import-legacy": "node --max-old-space-size=4096 _scripts/njx-to-md.js && node _scripts/update-navigation.js"
   },
   "keywords": [],
   "author": "",

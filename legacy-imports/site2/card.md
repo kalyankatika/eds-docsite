@@ -1,4 +1,11 @@
+
 ---
+layout: base.njk
+title: Legacy Card Component
+eleventyNavigation:
+  key: Legacy Card
+  parent: Components
+  order: 120
 ---
 
 # Legacy Card Component

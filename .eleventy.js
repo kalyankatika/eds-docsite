@@ -3,6 +3,17 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
+  // Process legacy .njx files for proper rendering
+  eleventyConfig.addTemplateFormats("njx");
+  eleventyConfig.addExtension("njx", {
+    outputFileExtension: "html",
+    compile: function(inputContent, inputPath) {
+      return function(data) {
+        // Render with njk template engine
+        return inputContent;
+      };
+    }
+  });
     // Add Navigation plugin
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 

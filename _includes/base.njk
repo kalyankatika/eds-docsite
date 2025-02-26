@@ -54,12 +54,14 @@
                 </div>
                 {% if content | toc and page.url != "/" and page.url != "/index.html" %}
                 <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
+                    {% if page.url != "/" %}
                     <div class="sticky top-8">
                         <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
                         <nav class="space-y-2">
-                            {{ content | toc | safe }}
+                            {{ content | toc | replace("\\n", "") | replace("#", "") | safe }}
                         </nav>
                     </div>
+                    {% endif %}
                 </div>
                 {% endif %}
             </div>

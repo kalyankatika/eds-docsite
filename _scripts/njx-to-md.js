@@ -24,10 +24,10 @@ legacyDirs.forEach(dir => {
 
 // Function to convert .njx to .md
 function convertNjxToMd(njxFilePath) {
-  // Read the .njx file
-  const content = fs.readFileSync(njxFilePath, 'utf8');
-  
   try {
+    // Read the .njx file
+    const content = fs.readFileSync(njxFilePath, 'utf8');
+    
     // Parse frontmatter if exists
     const parsedContent = matter(content);
     
@@ -38,18 +38,18 @@ function convertNjxToMd(njxFilePath) {
     let mdContent = '---\n';
     
     // Add each frontmatter field
-    Object.entries(parsedContent.data).forEach(([key, value]) => {
+    for (const [key, value] of Object.entries(parsedContent.data)) {
       if (typeof value === 'object') {
         mdContent += `${key}:\n`;
         
         // Handle nested objects like eleventyNavigation
-        Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        for (const [nestedKey, nestedValue] of Object.entries(value)) {
           mdContent += `  ${nestedKey}: ${nestedValue}\n`;
-        });
+        }
       } else {
         mdContent += `${key}: ${value}\n`;
       }
-    });
+    }
     
     mdContent += '---\n\n';
     
@@ -71,13 +71,22 @@ function convertNjxToMd(njxFilePath) {
     fs.writeFileSync(mdFilePath, mdContent);
     
     console.log(`Converted ${njxFilePath} to ${mdFilePath}`);
-  } catch (error) {
-    console.error(`Error parsing frontmatter in ${njxFilePath}:`, error);
     
-    // Fallback to direct copy if frontmatter parsing fails
-    const mdFilePath = njxFilePath.replace('.njx', '.md');
-    fs.writeFileSync(mdFilePath, content);
-    console.log(`Converted ${njxFilePath} to ${mdFilePath} (without frontmatter processing)`);
+    // Help garbage collection
+    parsedContent = null;
+    mdContent = null;
+  } catch (error) {
+    console.error(`Error processing ${njxFilePath}:`, error);
+    
+    try {
+      // Fallback to direct copy if frontmatter parsing fails
+      const content = fs.readFileSync(njxFilePath, 'utf8');
+      const mdFilePath = njxFilePath.replace('.njx', '.md');
+      fs.writeFileSync(mdFilePath, content);
+      console.log(`Converted ${njxFilePath} to ${mdFilePath} (without frontmatter processing)`);
+    } catch (copyError) {
+      console.error(`Failed to copy ${njxFilePath}:`, copyError);
+    }
   }
 }
 
