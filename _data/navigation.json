@@ -1,0 +1,86 @@
+[
+  {
+    "key": "Getting Started",
+    "title": "Getting Started",
+    "url": "/getting-started",
+    "order": 1,
+    "parent": null
+  },
+  {
+    "key": "About",
+    "title": "About",
+    "url": "/about",
+    "order": 2,
+    "parent": null
+  },
+  {
+    "key": "Components",
+    "title": "Components",
+    "url": "/components",
+    "order": 2,
+    "parent": null
+  },
+  {
+    "key": "Documentation",
+    "title": "Documentation",
+    "url": "/docs",
+    "order": 3,
+    "parent": null
+  },
+  {
+    "key": "Documentation",
+    "title": "Documentation",
+    "url": "/documentation",
+    "order": 3,
+    "parent": null
+  },
+  {
+    "key": "Home",
+    "title": "Home",
+    "url": "/index",
+    "order": 999,
+    "parent": null
+  },
+  {
+    "key": "Alerts",
+    "title": "Alerts",
+    "url": "/components/alerts",
+    "order": 999,
+    "parent": "Components"
+  },
+  {
+    "key": "Buttons",
+    "title": "Buttons",
+    "url": "/components/buttons",
+    "order": 999,
+    "parent": "Components"
+  },
+  {
+    "key": "Cards",
+    "title": "Cards",
+    "url": "/components/cards",
+    "order": 999,
+    "parent": "Components"
+  },
+  {
+    "key": "Forms",
+    "title": "Forms",
+    "url": "/components/forms",
+    "order": 999,
+    "parent": "Components"
+  },
+  {
+    "key": "Modals",
+    "title": "Modals",
+    "url": "/components/modals",
+    "order": 999,
+    "parent": "Components"
+  },
+  {
+    "key": "Navigation",
+    "title": "Navigation",
+    "url": "/components/navigation",
+    "order": 999,
+    "parent": "Components"
+  }
+]
