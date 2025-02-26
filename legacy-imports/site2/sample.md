@@ -25,3 +25,25 @@ This document demonstrates how `.njx` content is automatically converted and int
 2. Proper integration with navigation
 3. Seamless user experience
 {% endblock %}
+---
+layout: base.njk
+title: Sample NJX Document
+eleventyNavigation:
+  key: Sample NJX Doc
+  parent: Documentation
+  order: 60
+---
+
+# Sample NJX Document
+
+This is a sample document in .njx format from legacy site 2.
+
+## Introduction
+
+This document demonstrates how .njx files are converted to .md during the build process.
+
+## Features
+
+- Automatic conversion of .njx to .md
+- Preservation of frontmatter data
+- Integration with navigation system

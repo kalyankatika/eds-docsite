@@ -95,23 +95,8 @@
     "excerpt": ""
   },
   {
-    "url": "/legacy-imports/site2/card/",
-    "title": "/legacy-imports/site2/card/",
-    "excerpt": ""
-  },
-  {
     "url": "/legacy-imports/site2/sample/",
     "title": "/legacy-imports/site2/sample/",
-    "excerpt": ""
-  },
-  {
-    "url": "/legacy-imports/site1/button/",
-    "title": "/legacy-imports/site1/button/",
-    "excerpt": ""
-  },
-  {
-    "url": "/legacy-imports/site3/alert/",
-    "title": "/legacy-imports/site3/alert/",
     "excerpt": ""
   },
   {
@@ -127,6 +112,21 @@
   {
     "url": "/legacy-imports/site3/sample/",
     "title": "/legacy-imports/site3/sample/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site1/button/",
+    "title": "/legacy-imports/site1/button/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site2/card/",
+    "title": "/legacy-imports/site2/card/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site3/alert/",
+    "title": "/legacy-imports/site3/alert/",
     "excerpt": ""
   }
 ]
