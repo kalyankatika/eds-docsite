@@ -96,12 +96,12 @@
   },
   {
     "url": "/legacy-imports/site2/card/",
-    "title": "Imported Document",
+    "title": "/legacy-imports/site2/card/",
     "excerpt": ""
   },
   {
     "url": "/legacy-imports/site2/sample/",
-    "title": "Imported Document",
+    "title": "/legacy-imports/site2/sample/",
     "excerpt": ""
   },
   {
@@ -122,6 +122,11 @@
   {
     "url": "/components/",
     "title": "Components",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site3/sample/",
+    "title": "/legacy-imports/site3/sample/",
     "excerpt": ""
   }
 ]

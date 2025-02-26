@@ -1,4 +1,3 @@
-
 /**
  * Script to convert .njx to .md files
  * Run this during the build process to automatically convert legacy .njx files
@@ -6,27 +5,33 @@
 const fs = require('fs');
 const path = require('path');
 
-// Directory to look for .njx files
-const IMPORT_DIRS = ['legacy-imports/site1', 'legacy-imports/site2', 'legacy-imports/site3'];
+// Directories to scan for .njx files
+const legacyDirs = [
+  'legacy-imports/site1',
+  'legacy-imports/site2',
+  'legacy-imports/site3'
+];
 
-function convertNjxToMd(njxContent) {
-  // Basic conversion logic - modify as needed based on actual .njx structure
-  let mdContent = njxContent;
-  
-  // Remove Nunjucks-specific syntax
-  mdContent = mdContent.replace(/{%\s*extends\s*["'].*?["']\s*%}/g, '');
-  mdContent = mdContent.replace(/{%\s*block\s*.*?%}/g, '');
-  mdContent = mdContent.replace(/{%\s*endblock\s*%}/g, '');
-  
-  // Convert Nunjucks variables to markdown
-  mdContent = mdContent.replace(/{{(.*?)}}/g, (match, p1) => `*${p1.trim()}*`);
-  
-  // Add frontmatter if not exists
-  if (!mdContent.startsWith('---')) {
-    mdContent = `---\nlayout: base.njk\ntitle: Imported Document\n---\n\n${mdContent}`;
+// Ensure all directories exist
+legacyDirs.forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+    console.log(`Created directory: ${dir}`);
   }
-  
-  return mdContent;
+});
+
+// Function to convert .njx to .md
+function convertNjxToMd(njxFilePath) {
+  // Read the .njx file
+  const content = fs.readFileSync(njxFilePath, 'utf8');
+
+  // Create .md file path
+  const mdFilePath = njxFilePath.replace('.njx', '.md');
+
+  // Write content to .md file
+  fs.writeFileSync(mdFilePath, content);
+
+  console.log(`Converted ${njxFilePath} to ${mdFilePath}`);
 }
 
 function processDirectory(directory) {
@@ -34,24 +39,18 @@ function processDirectory(directory) {
     console.log(`Directory does not exist: ${directory}`);
     return;
   }
-  
+
   const files = fs.readdirSync(directory);
-  
+
   files.forEach(file => {
     const filePath = path.join(directory, file);
     const stats = fs.statSync(filePath);
-    
+
     if (stats.isDirectory()) {
       processDirectory(filePath);
     } else if (path.extname(file) === '.njx') {
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const mdContent = convertNjxToMd(content);
-        
-        // Create corresponding .md file
-        const mdFilePath = filePath.replace('.njx', '.md');
-        fs.writeFileSync(mdFilePath, mdContent);
-        console.log(`Converted: ${filePath} → ${mdFilePath}`);
+        convertNjxToMd(filePath);
       } catch (error) {
         console.error(`Error processing ${filePath}:`, error);
       }
@@ -60,7 +59,7 @@ function processDirectory(directory) {
 }
 
 // Process all import directories
-IMPORT_DIRS.forEach(dir => {
+legacyDirs.forEach(dir => {
   console.log(`Processing directory: ${dir}`);
   processDirectory(dir);
 });

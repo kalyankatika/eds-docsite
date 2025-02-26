@@ -35,6 +35,28 @@ function extractFrontmatter(filePath) {
 function generateNavigation() {
   const navigation = [];
   
+  // Define legacy directories
+  const LEGACY_DIRS = [
+    'legacy-imports/site1',
+    'legacy-imports/site2',
+    'legacy-imports/site3'
+  ];
+  
+  // Ensure all legacy directories exist
+  LEGACY_DIRS.forEach(dir => {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+      console.log(`Created directory: ${dir}`);
+    }
+  });
+  
+  // Add legacy directories to content dirs if they're not already included
+  LEGACY_DIRS.forEach(dir => {
+    if (!CONTENT_DIRS.includes(dir)) {
+      CONTENT_DIRS.push(dir);
+    }
+  });
+  
   // Process each content directory
   CONTENT_DIRS.forEach(dir => {
     if (!fs.existsSync(dir)) {

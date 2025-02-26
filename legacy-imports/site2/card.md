@@ -1,8 +1,3 @@
----
-layout: base.njk
-title: Imported Document
----
-
 
 ---
 layout: base.njk

@@ -1,8 +1,3 @@
----
-layout: base.njk
-title: Imported Document
----
-
 
 ---
 layout: base.njk
@@ -17,9 +12,9 @@ eleventyNavigation:
 
 This is a sample document from legacy site 2 in `.njx` format.
 
-*"This text will be converted to markdown format"*
+{{ "This text will be converted to markdown format" }}
 
-
+{% block content %}
 ## Introduction
 
 This document demonstrates how `.njx` content is automatically converted and integrated.
@@ -29,4 +24,4 @@ This document demonstrates how `.njx` content is automatically converted and int
 1. Automatic conversion during build
 2. Proper integration with navigation
 3. Seamless user experience
-
+{% endblock %}
