@@ -1,0 +1,69 @@
+<hr>
+<h2 id="layout%3A-base.njktitle%3A-legacy-dialog-from-site-3eleventynavigation%3Akey%3A-legacy-dialogparent%3A-legacy-componentsorder%3A-135" tabindex="-1">layout: base.njk<br>
+title: Legacy Dialog from Site 3<br>
+eleventyNavigation:<br>
+key: Legacy Dialog<br>
+parent: Legacy Components<br>
+order: 135 <a class="anchor" href="#layout%3A-base.njktitle%3A-legacy-dialog-from-site-3eleventynavigation%3Akey%3A-legacy-dialogparent%3A-legacy-componentsorder%3A-135" aria-hidden="true">#</a></h2>
+<h1>Legacy Dialog Component</h1>
+<p>This is a dialog component from the third legacy site.</p>
+<h2 id="example-code" tabindex="-1">Example Code <a class="anchor" href="#example-code" aria-hidden="true">#</a></h2>
+<pre><code class="language-html">&lt;div class=&quot;legacy-dialog&quot;&gt;
+  &lt;div class=&quot;legacy-dialog-header&quot;&gt;
+    &lt;h3&gt;Confirmation&lt;/h3&gt;
+    &lt;button class=&quot;legacy-dialog-close&quot;&gt;×&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;legacy-dialog-body&quot;&gt;
+    &lt;p&gt;Are you sure you want to continue?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;legacy-dialog-footer&quot;&gt;
+    &lt;button class=&quot;legacy-dialog-cancel&quot;&gt;Cancel&lt;/button&gt;
+    &lt;button class=&quot;legacy-dialog-confirm&quot;&gt;Confirm&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="rendered-example" tabindex="-1">Rendered Example <a class="anchor" href="#rendered-example" aria-hidden="true">#</a></h2>
+<div class="bg-white border border-gray-300 rounded-md shadow-lg my-4 max-w-md mx-auto">
+  <div class="flex justify-between items-center p-4 border-b border-gray-200">
+    <h3 class="font-bold">Confirmation</h3>
+    <button class="text-gray-500 hover:text-gray-700 text-xl font-semibold">×</button>
+  </div>
+  <div class="p-4 border-b border-gray-200">
+    <p>Are you sure you want to continue?</p>
+  </div>
+  <div class="p-4 flex justify-end space-x-2">
+    <button class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md">Cancel</button>
+    <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md">Confirm</button>
+  </div>
+</div>
+<h2 id="attributes" tabindex="-1">Attributes <a class="anchor" href="#attributes" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>'Dialog'</td>
+<td>Title displayed in the dialog header</td>
+</tr>
+<tr>
+<td>closable</td>
+<td>boolean</td>
+<td>true</td>
+<td>Whether the dialog can be closed with the × button</td>
+</tr>
+<tr>
+<td>showFooter</td>
+<td>boolean</td>
+<td>true</td>
+<td>Whether to show the footer with action buttons</td>
+</tr>
+</tbody>
+</table>

@@ -115,11 +115,6 @@
     "excerpt": ""
   },
   {
-    "url": "/",
-    "title": "Home - Enterprise Design System",
-    "excerpt": ""
-  },
-  {
     "url": "/docs/project-structure/",
     "title": "/docs/project-structure/",
     "excerpt": ""
@@ -130,8 +125,28 @@
     "excerpt": ""
   },
   {
+    "url": "/legacy-components/",
+    "title": "/legacy-components/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site1/input/",
+    "title": "/legacy-imports/site1/input/",
+    "excerpt": ""
+  },
+  {
+    "url": "/legacy-imports/site3/dialog/",
+    "title": "/legacy-imports/site3/dialog/",
+    "excerpt": ""
+  },
+  {
     "url": "/about/",
-    "title": "/about/",
+    "title": "About",
+    "excerpt": ""
+  },
+  {
+    "url": "/",
+    "title": "Home - Enterprise Design System",
     "excerpt": ""
   }
 ]
