@@ -36,7 +36,7 @@ function extractFrontmatter(filePath) {
 // Main function to generate navigation structure
 function generateNavigation() {
   const navigation = [];
-  
+
   // Define legacy directories
   const LEGACY_DIRS = [
     'legacy-imports/site1',
@@ -51,14 +51,7 @@ function generateNavigation() {
       console.log(`Created directory: ${dir}`);
     }
   });
-  
-  // Add legacy directories to content dirs if they're not already included
-  LEGACY_DIRS.forEach(dir => {
-    if (!CONTENT_DIRS.includes(dir)) {
-      CONTENT_DIRS.push(dir);
-    }
-  });
-  
+
   // Process each content directory
   CONTENT_DIRS.forEach(dir => {
     if (!fs.existsSync(dir)) {
@@ -87,7 +80,20 @@ function generateNavigation() {
           parent: eleventyNavigation.parent || null
         };
         
-        navigation.push(navItem);
+        // Check if this is a duplicate entry by URL and key
+        const existingItemIndex = navigation.findIndex(item => 
+          item.key === navItem.key && 
+          (item.url === navItem.url || item.title === navItem.title)
+        );
+        
+        if (existingItemIndex >= 0) {
+          // Replace existing item if this one has more complete info
+          if (navItem.parent && !navigation[existingItemIndex].parent) {
+            navigation[existingItemIndex] = navItem;
+          }
+        } else {
+          navigation.push(navItem);
+        }
       }
     });
   });

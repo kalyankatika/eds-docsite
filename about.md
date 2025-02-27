@@ -1,45 +1,34 @@
-
 ---
-layout: "base.njk"
-title: "About Us"
+layout: base.njk
+title: About
 eleventyNavigation:
   key: About
-  order: 2
+  order: 5
 ---
 
-# About Us
+# About Our Design System
+
+Our design system provides a comprehensive set of components, guidelines, and resources to help build consistent and user-friendly interfaces across all our products.
 
 ## Our Mission
 
-We're dedicated to creating beautiful and functional static websites using modern web technologies. Our Enterprise Design System provides a robust foundation for consistent user experiences across all digital products.
+We aim to create a unified design language that improves user experience, increases development efficiency, and ensures consistent brand representation across all digital touchpoints.
 
-## Our Technology Stack
+## History
 
-We leverage industry-leading technologies to deliver a seamless experience:
+This design system is the result of merging three legacy documentation sites into a single, cohesive resource. We've preserved backward compatibility while modernizing the interface and improving usability.
 
-- **11ty (Eleventy)**: A simpler static site generator
-- **Nunjucks**: For powerful templating
-- **TailwindCSS**: For responsive and maintainable styles
-- **Storybook**: For component-driven development
+## Key Features
 
-## Why Choose Us?
+- **Component Library**: Ready-to-use UI components with examples and documentation
+- **Design Guidelines**: Clear standards for typography, color, spacing, and more
+- **Legacy Support**: Access to components from previous design systems
+- **Responsive Design**: All components work across different screen sizes and devices
 
-1. **Performance First**: Static sites that load blazingly fast
-2. **Modern Development**: Using the latest web technologies
-3. **Component-Driven**: Reusable components for consistency
-4. **Unified Documentation**: Bringing together legacy and new documentation
+## The Team
 
-## Team
+Our design system is maintained by a cross-functional team of designers and developers dedicated to improving our product experience.
 
-Our cross-functional team of designers and developers work together to create and maintain this design system, ensuring it meets the needs of all stakeholders.
+## Contact
 
-## Support & Contact
-
-Have questions or need assistance? Reach out to us at:
-- Email: design-system@example.com
-- Internal Slack: #design-system
-- GitHub: github.com/enterprise-design-system
-
-## Legacy Systems Integration
-
-This design system unifies documentation from three legacy design systems, making it easier to transition to our new standards while maintaining backward compatibility.
+For questions, suggestions, or support regarding our design system, please contact the design systems team at designsystems@example.com.
