@@ -100,16 +100,6 @@
     "excerpt": ""
   },
   {
-    "url": "/",
-    "title": "Home - Enterprise Design System",
-    "excerpt": ""
-  },
-  {
-    "url": "/components/",
-    "title": "Components",
-    "excerpt": ""
-  },
-  {
     "url": "/legacy-imports/site3/sample/",
     "title": "/legacy-imports/site3/sample/",
     "excerpt": ""
@@ -120,13 +110,23 @@
     "excerpt": ""
   },
   {
+    "url": "/legacy-imports/site3/alert/",
+    "title": "Legacy Alert Component",
+    "excerpt": ""
+  },
+  {
     "url": "/legacy-imports/site2/card/",
     "title": "/legacy-imports/site2/card/",
     "excerpt": ""
   },
   {
-    "url": "/legacy-imports/site3/alert/",
-    "title": "Legacy Alert Component",
+    "url": "/components/",
+    "title": "Components",
+    "excerpt": ""
+  },
+  {
+    "url": "/",
+    "title": "Home - Enterprise Design System",
     "excerpt": ""
   }
 ]

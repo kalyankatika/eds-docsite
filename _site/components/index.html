@@ -49,7 +49,41 @@
     <main class="relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row py-8">
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pr-8 mb-8 lg:mb-0">
+                    <div class="sticky top-8">
+                        <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">Navigation</h3>
+                        <nav class="space-y-3"><ul class="space-y-2">
+                              <li>
+                                <a href="/" class="text-neutral-dark hover:text-primary">Home</a></li>
+                              <li>
+                                <a href="/getting-started/" class="text-neutral-dark hover:text-primary">Getting Started</a></li>
+                              <li>
+                                <a href="/about/" class="text-neutral-dark hover:text-primary">About</a></li>
+                              <li class="font-semibold text-primary">
+                                <a href="/components/" class="text-primary" aria-current="page">Components</a><ul class="pl-4 mt-2 space-y-1"><li>
+                                <a href="/components/alerts/" class="text-neutral-dark hover:text-primary">Alerts</a></li><li>
+                                <a href="/components/buttons/" class="text-neutral-dark hover:text-primary">Buttons</a></li><li>
+                                <a href="/components/cards/" class="text-neutral-dark hover:text-primary">Cards</a></li><li>
+                                <a href="/components/forms/" class="text-neutral-dark hover:text-primary">Forms</a></li><li>
+                                <a href="/components/modals/" class="text-neutral-dark hover:text-primary">Modals</a></li><li>
+                                <a href="/components/navigation/" class="text-neutral-dark hover:text-primary">Navigation</a></li><li>
+                                <a href="/legacy-imports/site1/button/" class="text-neutral-dark hover:text-primary">Legacy Button</a></li><li>
+                                <a href="/legacy-imports/site2/sample/" class="text-neutral-dark hover:text-primary">Legacy Sample 2</a></li><li>
+                                <a href="/legacy-imports/site3/alert/" class="text-neutral-dark hover:text-primary">Legacy Alert</a></li></ul></li>
+                              <li>
+                                <a href="/docs/" class="text-neutral-dark hover:text-primary">Documentation</a></li>
+                              <li>
+                                <a href="/documentation/" class="text-neutral-dark hover:text-primary">Documentation</a></li></ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                
                 <div class="flex-1">
+                    
+                    <h1 class="text-3xl font-bold text-primary mb-8">Components</h1>
+                    
                     <h1>Components</h1>
 <h2 id="form-elements" tabindex="-1">Form Elements <a class="anchor" href="#form-elements" aria-hidden="true">#</a></h2>
 <p>Our collection of form components designed for seamless user interaction.</p>
@@ -125,26 +159,32 @@
 <h2 id="legacy-components" tabindex="-1">Legacy Components <a class="anchor" href="#legacy-components" aria-hidden="true">#</a></h2>
 <p>Components imported from legacy design systems.</p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Button</h4>
     <p class="text-neutral-dark mb-4">Button component from legacy site 1.</p>
-    <a href="/legacy-imports/site1/button" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site1/button/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Card</h4>
     <p class="text-neutral-dark mb-4">Card component from legacy site 2.</p>
-    <a href="/legacy-imports/site2/card" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site2/card/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Alert</h4>
     <p class="text-neutral-dark mb-4">Alert component from legacy site 3.</p>
-    <a href="/legacy-imports/site3/alert" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site3/alert/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
 </div>
                 </div>
                 
-                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8">
-                    
+                
+                <div class="lg:w-64 lg:flex-shrink-0 lg:pl-8 mt-8 lg:mt-0">
                     <div class="sticky top-8">
                         <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
                         <nav class="space-y-2">
@@ -158,7 +198,6 @@
 <a href="legacy-components-" class=" block text-neutral-dark hover:text-primary">Legacy Components </a>
                         </nav>
                     </div>
-                    
                 </div>
                 
             </div>
