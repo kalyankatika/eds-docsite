@@ -1,4 +1,3 @@
-
 /**
  * Script to convert .njx to .md files
  * Run this during the build process to automatically convert legacy .njx files
@@ -27,21 +26,21 @@ function convertNjxToMd(njxFilePath) {
   try {
     // Read the .njx file
     const content = fs.readFileSync(njxFilePath, 'utf8');
-    
+
     // Parse frontmatter if exists
     let parsedContent = matter(content);
-    
+
     // Create .md file path
     const mdFilePath = njxFilePath.replace('.njx', '.md');
-    
+
     // Reconstruct the content with frontmatter
     let mdContent = '---\n';
-    
+
     // Add each frontmatter field
     for (const [key, value] of Object.entries(parsedContent.data)) {
       if (typeof value === 'object') {
         mdContent += `${key}:\n`;
-        
+
         // Handle nested objects like eleventyNavigation
         for (const [nestedKey, nestedValue] of Object.entries(value)) {
           mdContent += `  ${nestedKey}: ${nestedValue}\n`;
@@ -50,9 +49,9 @@ function convertNjxToMd(njxFilePath) {
         mdContent += `${key}: ${value}\n`;
       }
     }
-    
+
     mdContent += '---\n\n';
-    
+
     // Add the content body - remove any existing frontmatter that may be in the content
     const contentBody = parsedContent.content.trim();
     if (contentBody.startsWith('---')) {
@@ -66,18 +65,21 @@ function convertNjxToMd(njxFilePath) {
     } else {
       mdContent += contentBody;
     }
-    
+
     // Write content to .md file
     fs.writeFileSync(mdFilePath, mdContent);
-    
     console.log(`Converted ${njxFilePath} to ${mdFilePath}`);
-    
+
+    // Delete the original .njx file after successful conversion
+    fs.unlinkSync(njxFilePath);
+    console.log(`Deleted original file ${njxFilePath}`);
+
     // Help garbage collection
     parsedContent = null;
     mdContent = null;
   } catch (error) {
     console.error(`Error processing ${njxFilePath}:`, error);
-    
+
     try {
       // Fallback to direct copy if frontmatter parsing fails
       const content = fs.readFileSync(njxFilePath, 'utf8');
