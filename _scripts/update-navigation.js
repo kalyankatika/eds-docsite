@@ -10,7 +10,9 @@ const matter = require('gray-matter');
 // Directories to scan for content files
 const CONTENT_DIRS = [
   '.', 
-  'components', 
+  'components',
+  'docs',
+  'support',
   'legacy-imports/site1', 
   'legacy-imports/site2', 
   'legacy-imports/site3'
