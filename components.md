@@ -102,19 +102,25 @@ Containers for organizing related content and actions.
 Components imported from legacy design systems.
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Button</h4>
     <p class="text-neutral-dark mb-4">Button component from legacy site 1.</p>
-    <a href="/legacy-imports/site1/button" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site1/button/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Card</h4>
     <p class="text-neutral-dark mb-4">Card component from legacy site 2.</p>
-    <a href="/legacy-imports/site2/card" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site2/card/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
-  <div class="bg-white p-6 rounded-fds shadow-sm">
+  <div class="bg-white p-6 rounded-fds shadow-sm hover:shadow-md transition-shadow">
     <h4 class="font-semibold mb-2">Legacy Alert</h4>
     <p class="text-neutral-dark mb-4">Alert component from legacy site 3.</p>
-    <a href="/legacy-imports/site3/alert" class="text-primary hover:underline">View Documentation →</a>
+    <div class="mt-auto">
+      <a href="/legacy-imports/site3/alert/" class="text-primary hover:underline">View Documentation →</a>
+    </div>
   </div>
 </div>
