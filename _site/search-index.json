@@ -1,10 +1,5 @@
 [
   {
-    "url": "/about/",
-    "title": "About Us",
-    "excerpt": ""
-  },
-  {
     "url": "/channels/",
     "title": "Components by Channel",
     "excerpt": ""
@@ -37,11 +32,6 @@
   {
     "url": "/components/navigation/",
     "title": "Navigation",
-    "excerpt": ""
-  },
-  {
-    "url": "/docs/",
-    "title": "Documentation",
     "excerpt": ""
   },
   {
@@ -127,6 +117,21 @@
   {
     "url": "/",
     "title": "Home - Enterprise Design System",
+    "excerpt": ""
+  },
+  {
+    "url": "/docs/project-structure/",
+    "title": "/docs/project-structure/",
+    "excerpt": ""
+  },
+  {
+    "url": "/docs/",
+    "title": "Documentation",
+    "excerpt": ""
+  },
+  {
+    "url": "/about/",
+    "title": "/about/",
     "excerpt": ""
   }
 ]

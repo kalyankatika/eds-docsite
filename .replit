@@ -38,3 +38,14 @@ externalPort = 5000
 [[ports]]
 localPort = 3007
 externalPort = 5173
+
+[workflows]
+runButton = "Build Site"
+
+[[workflows.workflow]]
+name = "Build Site"
+author = 13620569
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"

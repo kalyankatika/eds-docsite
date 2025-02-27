@@ -7,13 +7,6 @@
     "parent": null
   },
   {
-    "key": "About",
-    "title": "About",
-    "url": "/about",
-    "order": 2,
-    "parent": null
-  },
-  {
     "key": "Components",
     "title": "Components",
     "url": "/components",

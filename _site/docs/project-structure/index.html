@@ -1,0 +1,35 @@
+<hr>
+<h2 id="layout%3A-%22base.njk%22title%3A-%22project-structure%22eleventynavigation%3Akey%3A-project-structureparent%3A-documentationorder%3A-10" tabindex="-1">layout: &quot;base.njk&quot;<br>
+title: &quot;Project Structure&quot;<br>
+eleventyNavigation:<br>
+key: Project Structure<br>
+parent: Documentation<br>
+order: 10 <a class="anchor" href="#layout%3A-%22base.njk%22title%3A-%22project-structure%22eleventynavigation%3Akey%3A-project-structureparent%3A-documentationorder%3A-10" aria-hidden="true">#</a></h2>
+<h1>Project Structure</h1>
+<p>This documentation site is built with Eleventy and organized to provide a clear, maintainable structure for all content.</p>
+<h2 id="directory-structure" tabindex="-1">Directory Structure <a class="anchor" href="#directory-structure" aria-hidden="true">#</a></h2>
+<ul>
+<li><code>_data/</code>: Contains site data files (navigation, metadata)</li>
+<li><code>_includes/</code>: Layout templates and partials</li>
+<li><code>_scripts/</code>: Utility scripts for build processes</li>
+<li><code>components/</code>: Component documentation</li>
+<li><code>legacy-imports/</code>: Imported content from legacy systems</li>
+<li><code>docs/</code>: General documentation pages</li>
+<li><code>assets/</code>: Static assets (images, JavaScript)</li>
+<li><code>css/</code>: Stylesheets and Tailwind configuration</li>
+</ul>
+<h2 id="key-files" tabindex="-1">Key Files <a class="anchor" href="#key-files" aria-hidden="true">#</a></h2>
+<ul>
+<li><code>.eleventy.js</code>: Eleventy configuration</li>
+<li><code>tailwind.config.js</code>: Tailwind CSS configuration</li>
+<li><code>package.json</code>: Project dependencies and scripts</li>
+</ul>
+<h2 id="navigation-structure" tabindex="-1">Navigation Structure <a class="anchor" href="#navigation-structure" aria-hidden="true">#</a></h2>
+<p>The site navigation is automatically generated from the frontmatter in markdown files. Each page can define its position in the navigation using the <code>eleventyNavigation</code> property.</p>
+<pre><code class="language-yaml">eleventyNavigation:
+  key: Page Name
+  parent: Parent Section (optional)
+  order: 10
+</code></pre>
+<h2 id="legacy-content-integration" tabindex="-1">Legacy Content Integration <a class="anchor" href="#legacy-content-integration" aria-hidden="true">#</a></h2>
+<p>Legacy documentation from previous systems is integrated through the <code>legacy-imports</code> directory structure. Content is organized by source system and automatically converted from <code>.njx</code> to <code>.md</code> format during the build process.</p>

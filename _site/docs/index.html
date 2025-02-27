@@ -59,8 +59,6 @@
                               <li>
                                 <a href="/getting-started/" class="text-neutral-dark hover:text-primary">Getting Started</a></li>
                               <li>
-                                <a href="/about/" class="text-neutral-dark hover:text-primary">About</a></li>
-                              <li>
                                 <a href="/components/" class="text-neutral-dark hover:text-primary">Components</a><ul class="pl-4 mt-2 space-y-1"><li>
                                 <a href="/components/alerts/" class="text-neutral-dark hover:text-primary">Alerts</a></li><li>
                                 <a href="/components/buttons/" class="text-neutral-dark hover:text-primary">Buttons</a></li><li>
@@ -71,10 +69,10 @@
                                 <a href="/legacy-imports/site1/button/" class="text-neutral-dark hover:text-primary">Legacy Button</a></li><li>
                                 <a href="/legacy-imports/site2/sample/" class="text-neutral-dark hover:text-primary">Legacy Sample 2</a></li><li>
                                 <a href="/legacy-imports/site3/alert/" class="text-neutral-dark hover:text-primary">Legacy Alert</a></li></ul></li>
-                              <li class="font-semibold text-primary">
-                                <a href="/docs/" class="text-primary" aria-current="page">Documentation</a></li>
                               <li>
-                                <a href="/documentation/" class="text-neutral-dark hover:text-primary">Documentation</a></li></ul>
+                                <a href="/documentation/" class="text-neutral-dark hover:text-primary">Documentation</a></li>
+                              <li class="font-semibold text-primary">
+                                <a href="/docs/" class="text-primary" aria-current="page">Documentation</a></li></ul>
                         </nav>
                     </div>
                 </div>
@@ -85,56 +83,28 @@
                     <h1 class="text-3xl font-bold text-primary mb-8">Documentation</h1>
                     
                     <h1>Documentation</h1>
+<p>Welcome to our documentation center. Here you'll find comprehensive guides and documentation to help you start working with our design system as quickly as possible.</p>
 <h2 id="getting-started" tabindex="-1">Getting Started <a class="anchor" href="#getting-started" aria-hidden="true">#</a></h2>
-<h3 id="prerequisites" tabindex="-1">Prerequisites <a class="anchor" href="#prerequisites" aria-hidden="true">#</a></h3>
-<ul>
-<li>Node.js (v14 or higher)</li>
-<li>npm or yarn</li>
-<li>Basic knowledge of Markdown</li>
-</ul>
-<h3 id="installation" tabindex="-1">Installation <a class="anchor" href="#installation" aria-hidden="true">#</a></h3>
-<pre><code class="language-bash"># Clone the repository
-git clone https://github.com/your-username/windsurf-project.git
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-</code></pre>
+<p>Start with our <a href="/getting-started/">Getting Started</a> guide to quickly set up and begin using our design system in your projects.</p>
 <h2 id="project-structure" tabindex="-1">Project Structure <a class="anchor" href="#project-structure" aria-hidden="true">#</a></h2>
-<pre><code>windsurf-project/
-├── _includes/          # Templates and components
-├── css/               # Stylesheets
-├── _site/             # Generated site (don't edit)
-├── .eleventy.js       # Eleventy configuration
-└── package.json       # Project dependencies
-</code></pre>
-<h2 id="creating-content" tabindex="-1">Creating Content <a class="anchor" href="#creating-content" aria-hidden="true">#</a></h2>
-<h3 id="adding-new-pages" tabindex="-1">Adding New Pages <a class="anchor" href="#adding-new-pages" aria-hidden="true">#</a></h3>
-<ol>
-<li>Create a new <code>.md</code> file in the root directory</li>
-<li>Add the required front matter:<pre><code class="language-yaml">---
-layout: &quot;base.njk&quot;
-title: &quot;Your Page Title&quot;
-eleventyNavigation:
-  key: Navigation Name
-  order: 4
----
-</code></pre>
-</li>
-<li>Add your content using Markdown</li>
-</ol>
-<h3 id="using-components" tabindex="-1">Using Components <a class="anchor" href="#using-components" aria-hidden="true">#</a></h3>
-<p>To embed a Storybook component:</p>
-<pre><code class="language-html">&lt;div class=&quot;storybook-embed&quot;&gt;
-    &lt;iframe
-        src=&quot;YOUR_STORYBOOK_URL&quot;
-        style=&quot;width:100%; height:500px; border:0;&quot;
-        title=&quot;Storybook Embed&quot;
-    &gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</code></pre>
+<p>Learn about how our <a href="/docs/project-structure/">Project Structure</a> is organized to help you navigate and contribute to the codebase.</p>
+<h2 id="component-library" tabindex="-1">Component Library <a class="anchor" href="#component-library" aria-hidden="true">#</a></h2>
+<p>Our <a href="/components/">Components</a> page provides an overview of all available UI components with examples and usage guidelines.</p>
+<h2 id="legacy-documentation" tabindex="-1">Legacy Documentation <a class="anchor" href="#legacy-documentation" aria-hidden="true">#</a></h2>
+<p>We've imported documentation from legacy systems which can be found under the Components section. These include:</p>
+<ul>
+<li><a href="/legacy-imports/site1/button/">Legacy Button</a></li>
+<li><a href="/legacy-imports/site2/card/">Legacy Card</a></li>
+<li><a href="/legacy-imports/site3/alert/">Legacy Alert</a></li>
+</ul>
+<h2 id="support-resources" tabindex="-1">Support Resources <a class="anchor" href="#support-resources" aria-hidden="true">#</a></h2>
+<p>If you need additional help:</p>
+<ul>
+<li><a href="/support/fds/">Foundation Design System</a></li>
+<li><a href="/support/partners/">Partners</a></li>
+</ul>
+<h2 id="contributing" tabindex="-1">Contributing <a class="anchor" href="#contributing" aria-hidden="true">#</a></h2>
+<p>We welcome contributions from the community. Please check our <a href="/guidelines/">Guidelines</a> page for more information on how to contribute.</p>
 
                 </div>
                 
@@ -144,12 +114,11 @@ eleventyNavigation:
                         <h3 class="text-sm font-semibold text-neutral-dark uppercase tracking-wider mb-4">On This Page</h3>
                         <nav class="space-y-2">
                             <a href="getting-started-" class=" block text-neutral-dark hover:text-primary">Getting Started </a>
-<a href="prerequisites-" class="ml-4 block text-neutral-dark hover:text-primary">Prerequisites </a>
-<a href="installation-" class="ml-4 block text-neutral-dark hover:text-primary">Installation </a>
 <a href="project-structure-" class=" block text-neutral-dark hover:text-primary">Project Structure </a>
-<a href="creating-content-" class=" block text-neutral-dark hover:text-primary">Creating Content </a>
-<a href="adding-new-pages-" class="ml-4 block text-neutral-dark hover:text-primary">Adding New Pages </a>
-<a href="using-components-" class="ml-4 block text-neutral-dark hover:text-primary">Using Components </a>
+<a href="component-library-" class=" block text-neutral-dark hover:text-primary">Component Library </a>
+<a href="legacy-documentation-" class=" block text-neutral-dark hover:text-primary">Legacy Documentation </a>
+<a href="support-resources-" class=" block text-neutral-dark hover:text-primary">Support Resources </a>
+<a href="contributing-" class=" block text-neutral-dark hover:text-primary">Contributing </a>
                         </nav>
                     </div>
                 </div>
