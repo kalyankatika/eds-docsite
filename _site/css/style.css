@@ -704,6 +704,10 @@ p {
   margin-top: 2rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .block {
   display: block;
 }
@@ -848,6 +852,12 @@ p {
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
@@ -858,6 +868,12 @@ p {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1096,6 +1112,10 @@ p {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-4 {
@@ -1355,6 +1375,14 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:w-64 {
     width: 16rem;
   }
@@ -1378,5 +1406,9 @@ p {
 
   .lg\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .lg\:pr-8 {
+    padding-right: 2rem;
   }
 }
