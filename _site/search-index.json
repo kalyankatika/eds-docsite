@@ -115,11 +115,6 @@
     "excerpt": ""
   },
   {
-    "url": "/",
-    "title": "Home - Enterprise Design System",
-    "excerpt": ""
-  },
-  {
     "url": "/docs/project-structure/",
     "title": "/docs/project-structure/",
     "excerpt": ""
@@ -147,6 +142,11 @@
   {
     "url": "/about/",
     "title": "About",
+    "excerpt": ""
+  },
+  {
+    "url": "/",
+    "title": "Home - Enterprise Design System",
     "excerpt": ""
   }
 ]
